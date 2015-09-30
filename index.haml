@@ -1,0 +1,225 @@
+!!!
+%html
+  %head
+    %title Jen Downs: Front End Developer
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %meta{:CONTENT => "Portfolio for Jen Downs, a Creative Web Designer and Front End Developer in Austin, TX.", :name => "Description"}
+    %meta{:content => "YkqMlmZyGys4qjwOT4Dg1JbhRuOO_-kNB3-n94eIFV8", :name => "google-site-verification"}/
+    %meta{:content => "noarchive,noimageindex", :name => "robots"}
+    %meta{:content => "NOODP", :name => "googlebot"}
+    %meta{:content => "nositelinkssearchbox", :name => "google"}/
+    %meta{:content => "notranslate", :name => "google"}/
+    %link{:href => "index.css", :rel => "stylesheet", :type => "text/css"}
+    :css
+      .collapse.in{
+      display:block;}
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  %body
+    %nav.navbar.navbar-default.navbar-fixed-top{:role => "navigation"}
+      .container
+        .navbar-header
+          %button.navbar-toggle{"data-target" => "#navbar-hamburger", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          .navbar-brand
+            \&nbsp;
+        #navbar-hamburger.collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right
+            %li.nav_link_text.nav_border_right
+              %a{:href => "#intro"} About
+            %li.nav_link_text.nav_border_right
+              %a{:href => "http://jen.li"} Blog
+            %li.nav_link_text
+              %a{:href => "mailto:hello@jendowns.com"}
+                Contact &nbsp;
+                %i.fa.fa-paper-plane-o
+    %section#cover.fixed-cover-bg.desk-bg.rw-wrapper
+      .container
+        .row
+          .col-xs-12
+            .rw-sentence
+              %span Hello! My name is Jennifer Downs.
+              %br
+                %span I am &nbsp;
+                .rw-words.rw-words-1
+                  %span
+                    a web developer
+                  %span
+                    an information designer
+                  %span
+                    a coffee lover
+                  %span
+                    a programmer
+    %section#intro
+      .container
+        .row
+          .col-xs-10.col-xs-offset-1.col-sm-10.col-sm-offset-1.col-md-6.col-md-offset-3.row-box-padding
+            #about-box
+              .text-center
+                %img#photo.img-constrain-50{:alt => "Photo of me, Jennifer Downs", :src => "img/photo.jpg"}/
+              %p.text-left
+                Welcome to my small (but growing!) portfolio site. My name is Jennifer, and I'm a
+                %strong front-end developer
+                living in
+                = succeed "." do
+                  %strong Austin, Texas
+              %p.text-left
+                I'm interested in <strong>creating mobile-first interfaces with UX design in mind</strong>, so I created this site using Bootstrap's responsive framework.
+    %section#projects
+      .container
+        .row
+          .col-xs-10.col-xs-offset-1.row-box-padding.text-center
+            %h1
+              Current Project
+            %p
+              %a{:href => "https://www.github.com/jendowns/trailhop"}
+                %img.project-preview.img-constrain-75{:alt => "Screenshot preview of my Django web app, Trailhop.", :src => "img/trailhop.jpg"}
+    %section#contact
+      .container
+        .row
+          .col-md-12
+            .text-center
+              %h2 SAY HELLO!
+              %br
+              %br
+              .pulse
+                %i.fa.fa-paper-plane.fa-3x
+              %br
+              We can work on a project together.
+              %br
+              %br
+              %a.btn.grow.btn-submit.contact-button{:href => "mailto:hello@jendowns.com", :role => "button"}
+                Send an Email &nbsp
+                %i.fa.fa-envelope-o
+    %footer
+      %style{:scoped => ""}
+        \.tooltip{
+        position:absolute;
+        z-index:1020;
+        display:block;
+        visibility:visible;
+        padding:5px;
+        font-size:13px;
+        opacity:0;
+        filter:alpha(opacity=0);
+        font-family: "Open Sans", Calibri, Arial, sans-serif;
+        text-transform: uppercase;
+        }
+        \.tooltip.in{
+        opacity:.8;
+        filter:alpha(opacity=80);
+        }
+        \.tooltip.top{
+        margin-top:-2px;
+        }
+        \.tooltip.top .tooltip-arrow{
+        bottom:0;
+        left:50%;
+        margin-left:-5px;
+        border-left:5px solid transparent;
+        border-right:5px solid transparent;
+        border-top:5px solid #000;
+        }
+        
+        \.tooltip.right .tooltip-arrow{
+        top:50%;
+        left:0;
+        margin-top:-5px;
+        border-top:5px solid transparent;
+        border-bottom:5px solid transparent;
+        border-right:5px solid #000;
+        }
+        \.tooltip-inner{
+        max-width:200px;
+        padding:3px 8px;
+        color:#fff;
+        text-align:center;
+        text-decoration:none;
+        background-color:#000;
+        \-webkit-border-radius:4px;
+        \-moz-border-radius:4px;
+        border-radius:4px;
+        }
+        \.tooltip-arrow{
+        position:absolute;
+        width:0;
+        height:0;
+        }
+      .container
+        %br
+          .row
+            .col-xs-10.col-xs-offset-1.col-sm-5.col-sm-offset-1.col-md-6.row-box-padding.text-left
+              %p
+                \&copy; 2015 Jennifer Downs.
+                %br
+                  Built with
+                  = succeed "." do
+                    %a{:href => "http://getbootstrap.com", :target => "_blank"} Bootstrap
+                  Hosted by
+                  = succeed "." do
+                    %a{:href => "http://asmallorange.com/", :target => "_blank"} ASO
+            .col-xs-10.col-xs-offset-1.col-sm-5.col-sm-offset-1.col-md-4.col-md-offset-1.row-box-padding
+              %h3.text-left
+                %a{:href => "https://www.twitter.com/jenisora", :target => "_blank", "data-placement" => "top", "data-toggle" => "tooltip", :title => "Twitter"}
+                  %i.fa.fa-twitter
+                \&nbsp;
+                %a{:href => "https://www.github.com/jendowns", :target => "_blank", "data-placement" => "top", "data-toggle" => "tooltip", :title => "GitHub"}
+                  %i.fa.fa-github-alt
+                \&nbsp;
+                %a{:href => "https://www.linkedin.com/in/jendowns", :target => "_blank", "data-placement" => "top", "data-toggle" => "tooltip", :title => "LinkedIn"}
+                  %i.fa.fa-linkedin
+                \&nbsp;
+                %a{:href => "https://www.paypal.me/jendowns", :target => "_blank", "data-placement" => "top", "data-toggle" => "tooltip", :title => "Paypal.me"}
+                  %i.fa.fa-paypal
+    %script{:src => "bower_components/jquery/dist/jquery.min.js", :type => "text/javascript"}
+    %script{:src => "bower_components/bootstrap/dist/js/bootstrap.min.js", :type => "text/javascript"}
+    :javascript
+      $(window).scroll(function() {
+        $('#object1, #object2, #object3').each(function(){
+        var imagePos = $(this).offset().top;
+      
+        var topOfWindow = $(window).scrollTop();
+          if (imagePos < topOfWindow+600) {
+            $(this).addClass("slideUp");
+          }
+        });
+      });
+      
+      function smooth_scroll_to(offset){
+        $('html, body').stop().animate({scrollTop: offset}, 1500, 'swing');
+      }
+      
+      $(document).ready(function(evt){
+        // Initialize Boostrap tooltips
+        $('[data-toggle="tooltip"]').tooltip();
+      
+        // Bind navbar links to page scroll animation (including page title link)
+        var $navbar = $("nav.navbar");
+        
+        $navbar.find("a").bind('click', function(evt) {
+          var $anchor = $(this);
+          
+          if($anchor.attr("href").indexOf("#")!==0)
+            return;   // Don't try to scroll to links that aren't bookmarks
+          
+          var offset;
+          if($anchor.attr("href")==="#")
+            offset=0;   // navigate to top of page
+          else
+            offset=Math.round($($anchor.attr('href')).offset().top);
+            
+          smooth_scroll_to(offset);
+          
+          $navbar.find("li.active").removeClass("active");
+          
+          // Don't make the element active if it's the navbar title
+          if(!$anchor.hasClass("navbar-brand"))
+            $anchor.parent().addClass("active");
+            
+          evt.preventDefault();
+        });
+      });
