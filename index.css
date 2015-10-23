@@ -907,14 +907,14 @@ section:first-of-type {
   width: 100%;
   padding-top: 90px;
   padding-bottom: 90px;
-  font-size: 20px;
-  letter-spacing: 0.5px;
-  line-spacing: 21px;
-  font-family: "Open Sans Light", "Open Sans", Calibri, Arial, sans-serif;
 }
 
 #about-box {
   padding: 60px 30px;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  line-spacing: 30px;
+  font-family: "Open Sans Light", "Open Sans", Calibri, Arial, sans-serif;
 }
 
 #photo {
@@ -929,7 +929,7 @@ h3,
 .h3 {
   color: #B6B6CC;
   font-family: "Open Sans Light", "Open Sans", Calibri, Arial, sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 36px;
 }
 
@@ -945,7 +945,7 @@ h2 {
 
 .h1 {
   color: #f1f1f1;
-  font-size: 60px;
+  font-size: 75px;
   font-family: "Cedarville", "Open Sans Light Italic", "Open Sans", Calibri, Arial, sans-serif;
 }
 
@@ -960,6 +960,7 @@ h2 {
   letter-spacing: 0.5px;
   line-spacing: 19px;
   color: #6E5A73;
+  font-size: 24px;
   font-family: "Open Sans Light", Calibri, Arial, sans-serif;
 }
 

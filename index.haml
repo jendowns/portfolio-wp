@@ -54,14 +54,14 @@
             .text-center
               %img#photo.img-constrain-75{:alt => "Photo of me, Jennifer Downs", :src => "img/photo.jpg"}/
           .col-xs-10.col-xs-offset-1.col-sm-10.col-sm-offset-0.col-md-6.col-md-offset-0.row-box-padding#about-box
-            %p.text-left
+            %p.text-left{:style => "padding-bottom:20px;"}
               Welcome to my small (but growing!) portfolio site. My name is Jennifer, and I'm a
               %strong front-end developer
               living in
               = succeed "." do
                 %strong Austin, Texas
             %p.text-left
-              I'm interested in <strong>creating mobile-first interfaces with UX design in mind</strong>, so I created this site using Bootstrap's responsive framework.
+              I'm interested in <strong>creating mobile-first interfaces with UX design in mind</strong>. In my free time, I like to do things like <a href="https://www.github.com/jendowns/trailhop-django" target="_blank"> build a Django app</a> or <a href="https://www.github.com/jendowns/unity-2d-project" target="_blank">make 2D game with JavaScript</a> in Unity 
     %section#projects
       .container
         .row
@@ -69,6 +69,8 @@
             Here are some things I have been working on...
             %br
             (click to visit)
+            %br
+            %br
         .row
           .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-0.col-md-5.col-md-offset-1.row-box-padding
             %p.text-center
