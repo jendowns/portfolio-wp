@@ -870,24 +870,23 @@ a:active {
   letter-spacing: 0.75px;
 }
 
-.navbar-default li a:hover {
-  background-color: #F2DAD5;
-  color: #CF6F6A;
+.navbar-default .navbar-nav li a:hover {
+  background-color: #B6B6CC;
+  color: #0B0D3D;
 }
 
-.navbar-default li a:active {
-  background-color: #F2DAD5;
-  color: #CF6F6A;
+.navbar-default .navbar-nav li a:active {
+  background-color: #B6B6CC;
+  color: #0B0D3D;
 }
 
-.navbar-default li a:focus {
-  background-color: #fff;
-  color: #CF6F6A;
+.navbar-default .navbar-nav li a:focus {
+  background-color: #B6B6CC;
+  color: #0B0D3D;
 }
 
-.navbar-default li a:visited {
-  background-color: #fff;
-  color: #CF6F6A;
+.navbar-fixed-top {
+  border: 0px;
 }
 
 strong {
@@ -903,24 +902,10 @@ section:first-of-type {
   background-color: #0B0D3D;
 }
 
-/*
-.fixed-cover-bg {
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-}
-
-.fixed-cover-bg.desk-bg {
-  background-image: url('img/pencils.jpg');
-}
-*/
-
 .row-box-padding {
   padding-bottom: 20px;
   padding-top: 20px;
 }
-
-/* -- Rotating Words Animation by Mary Lou @ Tymphanus.net -- */
 
 /* ----------/ intro section /----------*/
 
@@ -988,10 +973,6 @@ h2 {
 .project-preview {
   border-radius: 1%;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-}
-
-.project-preview:hover {
-  opacity: 0.75;
 }
 
 @media screen and (max-width: 420px) {
@@ -1079,7 +1060,7 @@ h2 {
 
 footer {
   background-color: #333;
-  background-image: url("img/chalkboard.jpg");
+  background-image: url("img/polygon.gif");
   /*-- image from http://thepatternlibrary.com --*/
   max-height: 300px;
   min-height: 120px;
