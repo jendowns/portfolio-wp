@@ -42,73 +42,75 @@
         .row
           .col-xs-10.col-xs-offset-1.text-center
             .h1
-              Jennifer Downs
+              Jen Downs
             .h3
-              front end developer
+              front-end developer
         .row
           .col-xs-10.col-xs-offset-1.col-md-8.col-md-offset-2.text-center
     %section#intro
-      .container
+      .container-fluid
         .row
           .col-xs-10.col-xs-offset-1.col-sm-10.col-sm-offset-1.col-md-4.col-md-offset-1.row-box-padding
             .text-center
               %img#photo.img-constrain-75{:alt => "Photo of me, Jennifer Downs", :src => "img/photo.jpg"}/
           .col-xs-10.col-xs-offset-1.col-sm-10.col-sm-offset-0.col-md-6.col-md-offset-0.row-box-padding#about-box
             %p.text-left{:style => "padding-bottom:20px;"}
-              My name is Jennifer, and I'm a creative
-              %strong front-end developer
-              living in
-              = succeed "." do
-                %strong Austin, Texas
+              <strong>Hello, my name is Jen.</strong> I'm a
+              front-end developer
+              at <a href="http://wearemammoth.com/">We Are Mammoth</a>, and I build beautiful, responsive websites and applications.
             %p.text-left
-              I love to code, and I want to create beautiful, accessible, mobile-ready web sites and applications.
-    %section#projects
+              I currently live in Austin, Texas, where the weather is warm and breakfast tacos are a staple. 
+    %section#email-layouts
       .container
         .row
-          .col-xs-10.col-xs-offset-1.row-box-padding.text-center
-            Here are some things I've been working on...
-            %br
-            %br
+          .col-xs-12.col-sm-6.row-box-padding
+            %h4.project-heading{:style => "font-size:32px; padding: 0px;font-family: 'Open Sans Semi Bold', Calibri, Arial, sans-serif;"} Project
+            %h4.project-heading Responsive Newsletter Layouts
+            .row
+              .col-xs-12.row-box-padding 
+                %p I started with <a href="https://litmus.com/">Litmus</a>' Slate newsletter template and reworked it to create 5 different responsive layouts.
+            .row
+              .col-xs-12.row-box-padding
+                %a.btn.grow.btn-primary.project-button{:href => "https://github.com/jendowns/email-layouts", :role => "button"}
+                  View on Github
+          .col-xs-12.col-sm-6.row-box-padding
+            %img.img-responsive{:src => "img/email-animation-2.gif", :style => "border-radius: 5px;"}
+    %section#video-game
+      .container
         .row
-          .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-0.col-md-5.col-md-offset-1.row-box-padding
-            %p.text-center
-              %img.project-preview{:alt => "Screenshot preview of my Django web app, Trailhop.", :src => "img/trailhop.jpg"}
-            %br
-            %p.text-center
-              Django web app, <strong>Trailhop</strong>
-            %br
-            %p.text-center
-              %a.btn.grow.btn-primary.project-button{:href => "https://www.github.com/jendowns/app-trailhop-django", :role => "button", :target => "_blank"}
-                View Project &nbsp
-                %i.fa.fa-external-link
-          .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-0.col-md-5.col-md-offset-0.row-box-padding
-            %p.text-center
-              %img.project-preview{:alt => "Screenshot of my 2D arcade game, made with JavaScript in Unity", :src => "img/hopper-gameplay.gif"}
-            %br
-            %p.text-center
-              Pixel Art + Arcade Game, <strong>Hopper</strong>
-            %br
-            %p.text-center
-              %a.btn.grow.btn-primary.project-button{:href => "https://www.github.com/jendowns/2d-unity-hopper", :role => "button", :target => "_blank"}
-                View Project &nbsp
-                %i.fa.fa-external-link
+          .col-xs-12.col-sm-6.row-box-padding
+            %img.img-responsive{:src => "img/hopper.png", :style => "border-radius: 5px;padding-right:5px;"}
+          .col-xs-12.col-sm-6.row-box-padding
+            %h4.project-heading{:style => "font-size:32px; padding:0px; font-family: 'Open Sans Semi Bold', Calibri, Arial, sans-serif;"} Project
+            %h4.project-heading 2D Arcade Game
+            .row
+              .col-xs-12.row-box-padding
+                %p I made a 2D arcade game using <a href="https://unity3d.com/">Unity</a> engine. Annnnd it's written in JavaScript! (Well, Unity's <em>flavor</em> of JavaScript.)
+            .row
+              .col-xs-12.row-box-padding
+                %a.btn.grow.btn-primary.project-button{:href => "https://github.com/jendowns/2d-unity-hopper", :role => "button"}
+                  View on Github
     %section#contact
       .container
         .row
           .col-md-12
             .text-center
-              %h2 SAY HELLO!
+              %h2 Want to say hello?
               %br
               %br
               .pulse
                 %i.fa.fa-paper-plane.fa-3x
               %br
-              We can work on a project together.
+              Send me an email or find me on Twitter.
               %br
               %br
-              %a.btn.grow.btn-submit.contact-button{:href => "mailto:hello@jendowns.com", :role => "button"}
-                Send an Email &nbsp
-                %i.fa.fa-envelope-o
+        .row
+          .col-md-2.col-md-offset-4.col-sm-4.col-sm-offset-2.col-xs-6{:style => "text-align:right;"}
+            %a.btn.grow.btn-submit.contact-button{:href => "mailto:hello@jendowns.com", :role => "button"}
+              Email
+          .col-md-2.col-sm-4.col-xs-6{:style => "text-align:left;"}
+            %a.btn.grow.btn-submit.contact-button{:href => "https://www.twitter.com/jenisora", :target => "_blank", :role => "button"}
+              Twitter
     %footer
       %style{:scoped => ""}
         \.tooltip{
@@ -168,7 +170,7 @@
           .row
             .col-xs-10.col-xs-offset-1.col-sm-5.col-sm-offset-1.col-md-6.row-box-padding.text-left
               %p
-                \&copy; 2015 Jennifer Downs.
+                \&copy; 2016 Jennifer Downs.
                 %br
                   Hosted by
                   = succeed "." do

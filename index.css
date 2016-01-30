@@ -169,6 +169,12 @@ img {
   vertical-align: middle;
 }
 
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -186,6 +192,7 @@ img {
 
 h2,
 h3,
+h4,
 .h1,
 .h3 {
   font-family: inherit;
@@ -202,6 +209,11 @@ h3,
   margin-bottom: 10px;
 }
 
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .h1 {
   font-size: 36px;
 }
@@ -213,6 +225,10 @@ h2 {
 h3,
 .h3 {
   font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
 }
 
 p {
@@ -257,19 +273,29 @@ ul {
   }
 }
 
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .row {
   margin-left: -15px;
   margin-right: -15px;
 }
 
+.col-md-2,
+.col-sm-4,
 .col-md-4,
 .col-sm-5,
-.col-md-5,
+.col-xs-6,
 .col-sm-6,
 .col-md-6,
 .col-md-8,
 .col-xs-10,
 .col-sm-10,
+.col-xs-12,
 .col-md-12 {
   position: relative;
   min-height: 1px;
@@ -277,12 +303,22 @@ ul {
   padding-right: 15px;
 }
 
-.col-xs-10 {
+.col-xs-6,
+.col-xs-10,
+.col-xs-12 {
   float: left;
+}
+
+.col-xs-12 {
+  width: 100%;
 }
 
 .col-xs-10 {
   width: 83.33333333%;
+}
+
+.col-xs-6 {
+  width: 50%;
 }
 
 .col-xs-offset-1 {
@@ -290,6 +326,7 @@ ul {
 }
 
 @media (min-width: 768px) {
+  .col-sm-4,
   .col-sm-5,
   .col-sm-6,
   .col-sm-10 {
@@ -308,6 +345,14 @@ ul {
     width: 41.66666667%;
   }
 
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
+
+  .col-sm-offset-2 {
+    margin-left: 16.66666667%;
+  }
+
   .col-sm-offset-1 {
     margin-left: 8.33333333%;
   }
@@ -318,8 +363,8 @@ ul {
 }
 
 @media (min-width: 992px) {
+  .col-md-2,
   .col-md-4,
-  .col-md-5,
   .col-md-6,
   .col-md-8,
   .col-md-12 {
@@ -338,12 +383,16 @@ ul {
     width: 50%;
   }
 
-  .col-md-5 {
-    width: 41.66666667%;
-  }
-
   .col-md-4 {
     width: 33.33333333%;
+  }
+
+  .col-md-2 {
+    width: 16.66666667%;
+  }
+
+  .col-md-offset-4 {
+    margin-left: 33.33333333%;
   }
 
   .col-md-offset-2 {
@@ -675,6 +724,8 @@ ul {
 
 .container:before,
 .container:after,
+.container-fluid:before,
+.container-fluid:after,
 .row:before,
 .row:after,
 .nav:before,
@@ -690,6 +741,7 @@ ul {
 }
 
 .container:after,
+.container-fluid:after,
 .row:after,
 .nav:after,
 .navbar:after,
@@ -736,14 +788,6 @@ ul {
 
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
-
-.fa-envelope-o:before {
-  content: "\f003";
-}
-
-.fa-external-link:before {
-  content: "\f08e";
-}
 
 .fa-twitter:before {
   content: "\f099";
@@ -910,10 +954,11 @@ section:first-of-type {
 /* ----------/ intro section /----------*/
 
 #intro {
-  background-color: #F2F2E1;
+  background-color: #f8f8f8;
   width: 100%;
   padding-top: 90px;
   padding-bottom: 90px;
+  color: #423856;
 }
 
 #about-box {
@@ -950,6 +995,12 @@ h2 {
   font-size: 28px;
 }
 
+h4 {
+  color: #6E5A73;
+  font-family: "Open Sans", Calibri, Arial, sans-serif;
+  font-size: 26px;
+}
+
 .h1 {
   color: #f1f1f1;
   font-size: 75px;
@@ -958,28 +1009,41 @@ h2 {
 
 /* ---------- / projects section / ------- */
 
-#projects {
-  background-color: #EBDFCE;
-  width: 100%;
+#email-layouts,
+#video-game {
   padding-top: 90px;
   padding-bottom: 90px;
+  width: 100%;
   font-size: 22px;
   letter-spacing: 0.5px;
   line-height: 30px;
-  color: #6E5A73;
+  color: #423856;
   font-family: "Open Sans Light", Calibri, Arial, sans-serif;
 }
 
-.project-preview {
-  border-radius: 1%;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+#email-layouts .project-heading,
+#video-game .project-heading {
+  color: #423856;
 }
 
-@media screen and (max-width: 420px) {
-  .project-preview {
-    width: 75%;
-    height: 75%;
-  }
+#email-layouts .btn-primary,
+#video-game .btn-primary {
+  color: #423856;
+  border-color: #423856;
+}
+
+#email-layouts .btn-primary:hover,
+#video-game .btn-primary:hover {
+  background-color: #423856;
+  color: #fefefe;
+}
+
+#video-game {
+  background-color: #eee;
+}
+
+#email-layouts {
+  background-color: #eddede;
 }
 
 /* ----------/ badge specifics /----------*/
@@ -1020,10 +1084,6 @@ h2 {
 
 .btn.btn-submit:active {
   background-image: none;
-}
-
-.btn.btn-submit i.fa {
-  color: #fff;
 }
 
 .contact-button:hover {
