@@ -1,3 +1,13 @@
+/*
+Theme Name: Luna
+Author: Jen Downs
+Author URI: https://jendowns.com/
+Description: Child-theme of TwentySixteen.
+Version: 1.0
+*/
+
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -82,6 +92,17 @@ p, span, div, strong, em {
 	padding: 8px 36px;
 	margin: 10px 0;
 	display: table;
+	text-transform: uppercase;
+}
+.subhead {
+	background-color: $purple;
+	color: $green;
+	font-family: 'PT Mono',monospace;
+	font-size: 36px;
+	line-height: 36px;
+	padding: 8px 24px;
+	margin: 0 0 20px 0;
+	display: table;
 }
 h2 {
 	color: $dark-purple;
@@ -134,8 +155,14 @@ small a {
 
 	&:hover { color: $light-green; }
 }
-a.btn {
+.screen-reader-response {
+	visibility: hidden !important;
+	height: 0px !important;
+	width: 0px !important;
+}
+a.btn, .wpcf7-submit {
 	background-color: $green;
+	border: 0 !important;
 	color: $purple;
 	font-size: 20px;
 	float: right;
@@ -202,20 +229,7 @@ small {
 	min-height: 20px;
 	margin: auto;
 }
-#contact {
-	text-align: center;
 
-	a {
-		color: $light-beige;
-		padding: 0;
-		font-size: 36px;
-
-		&:hover {
-			color: $green;
-		}
-	}
-
-}
 footer .col {
 	text-align:center;
 }
@@ -254,14 +268,145 @@ section:nth-child(3) {
 	*/
 }
 section:nth-child(4){
-	background-color: $purple;
+	background-color: $beige;
 	min-height: 30px;
+	padding: 50px 0;
 }
 section:nth-child(5){
+	background-color: $purple;
+	min-height: 100px;
+
+	a {
+		color: $light-beige;
+		padding: 0;
+		font-size: 36px;
+
+		&:hover {
+			color: $green;
+		}
+	}
+}
+section:nth-child(6){
 	background-color: $dark-purple;
 	min-height: 100px;
 }
 
+#contact {
+	//background-color: $light-beige;
+	//max-width: 500px;
+	form { 
+		//background-color: #fefefe;
+		//padding: 2em;
+
+		p { margin-bottom: 15px; }
+	}
+
+	input, textarea {
+		border: 3px solid $purple;
+		width: 100%;
+		min-height: 40px;
+		display: block;
+		margin: 0;
+		padding: 5px;
+		box-sizing: border-box;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 16px;
+		background-color: #fefefe;
+
+		&.wpcf7-not-valid {
+			border: 3px solid #ef476f;
+		}
+	}
+
+	input.wpcf7-submit {
+		float: none;
+		width: auto !important;
+		margin-left: auto !important;
+		margin-right: 0 !important;
+		padding: 10px 30px !important;
+		font-size: 20px;
+		background-color: $green !important;
+	}
+
+	label {
+		font-weight: bold;
+		color: $dark-purple;
+		font-size: 20px;
+		font-family: 'Source Sans Pro', sans-serif;
+	}
+
+	.wpcf7-not-valid-tip {
+		font-size: 18px;
+		color: #ef476f;
+		padding: 5px 10px;
+		font-style: italic;
+		font-family: 'Source Sans Pro', sans-serif;
+	}
+	.wpcf7-response-output {
+		font-size: 18px;
+		line-height: 25px;
+		color: $purple;
+		padding: 20px 5px 5px 5px;
+		font-weight: bold;
+		font-style: italic;
+		font-family: 'Source Sans Pro', sans-serif;
+		display: inline-block;
+
+		&.wpcf7-display-none {
+			display: none;
+			visibility: hidden;
+		}
+
+		&.wpcf7-validation-errors {
+			color: #ef476f;
+		}
+	}
+}
+
+#contact > p a {
+	font-size: 20px;
+}
+
+.wpcf7-recaptcha > div {
+	margin-left: auto;
+	margin-bottom: 13px;
+}
+
+#overlay-container {   
+	position: relative;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #FFEFE4;
+  filter: alpha(opacity=90);
+  -moz-opacity: 0.9;
+  opacity: 0.9; 
+  z-index: 22;
+  padding-bottom: 20px;
+}
+
+#overlay span {
+    padding: 5px;
+    border-radius: 5px;
+    color: #222;
+    font-size: 30px;
+    background-color: transparent;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    position:relative;
+    top:25%;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}
 
 
 /* MOBILE */
@@ -280,6 +425,17 @@ section:nth-child(5){
 	}
 	h2 {
 		line-height: 1.25;
+	}
+	section:nth-child(4) {
+		padding: 15px 0;
+		form, form .wpcf7-response-output {
+			padding: 5px;
+		}
+		form .wpcf7-response-output {
+			margin-left: -15px;
+			margin-right: -15px;
+			margin-bottom: -15px;
+		}
 	}
 	section:nth-child(3) article {
 		padding: 10px 0;

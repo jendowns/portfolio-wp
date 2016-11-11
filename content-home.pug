@@ -18,7 +18,7 @@ body
           h3 October 20, 2016
           p I wrote about using PHP to generate a side navigation menu, with categories as dropdown triggers and posts as dropdown list items.
           p
-            a.btn(href='http://wearemammoth.com/2016/10/wordpress-tutorial-generating-sidebar-categories-posts', target='_blank') 
+            a.btn(href='/wordpress-sidebar', target='_blank') 
               | Read More &nbsp;
               i.fa.fa-external-link
     article
@@ -30,23 +30,59 @@ body
             em  flavor 
             | of JavaScript.) I wrote an article for The Recompiler about how I made this game, including my planning and some of the trickier development challenges.
           p
-            a.btn(href='https://recompilermag.com/issues/issue-3/creating-a-2d-arcade-game-with-javascript-in-unity-5/', target='_blank') 
+            a.btn(href='/unity-arcade-game', target='_blank') 
               | Read More &nbsp;
               i.fa.fa-external-link
   section
-    .flex-grid-third#contact
+    .flex-grid
+      .col
+        #contact
+          span.subhead Contact me
+          p You can reach me at 
+            a(href='mailto:hello@jendowns.com') hello@jendowns.com
+            | .
+          p Or you can use the form below.
+          br 
+          #overlay-container
+            #overlay.hidden
+              span Thank you for your message.
+            <?php echo do_shortcode( '[contact-form-7 id="7" title="Contact Form"]' ); ?>  
+  
+  section
+    .flex-grid-third
       .col
         a(href='https://www.twitter.com/jenisora', target='_blank', title='Twitter')
           i.fa.fa-twitter
       .col
-        a(href='mailto:hello@jendowns.com')
-          i.fa.fa-paper-plane-o 
+        a(href='https://www.linkedin.com/in/jendowns', target='_blank', title='LinkedIn')
+          i.fa.fa-linkedin 
       .col     
         a(href='https://www.github.com/jendowns', target='_blank', title='GitHub')
-          i.fa.fa-github    
+          i.fa.fa-github 
   section
     footer
       .flex-grid
         .col
           small &copy; 2016 Jen Downs. Palette via 
             a(href='http://www.vanschneider.com/colors/', target='_blank') ColorClaim
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', type='text/javascript')
+  script(type='text/javascript').
+    $("#contact .wpcf7-form").submit(function(event) {
+    $("#overlay").removeClass("hidden");
+    //document.cookie = "form-submitted";
+    //console.log("cookie created");
+    });
+    /*
+    $(document).ready(function(){
+    var cookie = document.cookie;
+    if(cookie === "form-submitted"){
+    $("#overlay").removeClass("hidden");
+    console.log("cookie detected");
+    }
+    });
+    */
+    if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+    window.location.hash = "👾👾👾";
+    }
+    
+
