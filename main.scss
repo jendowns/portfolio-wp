@@ -276,10 +276,15 @@ section:nth-child(5){
 	background-color: $purple;
 	min-height: 100px;
 
+	.col {
+		text-align: center;
+	}
+
 	a {
 		color: $light-beige;
 		padding: 0;
-		font-size: 36px;
+		font-size: 30px;
+		margin: 0 auto;
 
 		&:hover {
 			color: $green;
@@ -391,7 +396,7 @@ section:nth-child(6){
   padding-bottom: 20px;
 }
 
-#overlay span {
+#overlay p {
     padding: 5px;
     border-radius: 5px;
     color: #222;
@@ -400,7 +405,15 @@ section:nth-child(6){
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
     position:relative;
-    top:25%;
+    top:30%;
+
+    a {
+    	color: $purple;
+
+    	&:hover {
+    		color: $dark-purple;
+    	}
+    }
 }
 
 .hidden {

@@ -45,7 +45,8 @@ body
           br 
           #overlay-container
             #overlay.hidden
-              span Thank you for your message.
+              p
+                span thank you
             <?php echo do_shortcode( '[contact-form-7 id="7" title="Contact Form"]' ); ?>  
   
   section
@@ -79,6 +80,13 @@ body
     $("#overlay").removeClass("hidden");
     console.log("cookie detected");
     }
+    });
+    function hideContactForm(){
+    $("#overlay").removeClass("hidden");
+    }
+    $(".resend-contact-form").click(function(event){
+    event.preventDefault();
+    $("#overlay").addClass("hidden");
     });
     */
     if (navigator.userAgent.indexOf('Mac OS X') != -1) {

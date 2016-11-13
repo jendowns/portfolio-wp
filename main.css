@@ -233,10 +233,13 @@ section:nth-child(4) {
 section:nth-child(5) {
   background-color: #7B24D2;
   min-height: 100px; }
+  section:nth-child(5) .col {
+    text-align: center; }
   section:nth-child(5) a {
     color: #FFFCFA;
     padding: 0;
-    font-size: 36px; }
+    font-size: 30px;
+    margin: 0 auto; }
     section:nth-child(5) a:hover {
       color: #00FEC9; }
 
@@ -322,7 +325,7 @@ section:nth-child(6) {
   z-index: 22;
   padding-bottom: 20px; }
 
-#overlay span {
+#overlay p {
   padding: 5px;
   border-radius: 5px;
   color: #222;
@@ -331,7 +334,11 @@ section:nth-child(6) {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
   position: relative;
-  top: 25%; }
+  top: 30%; }
+  #overlay p a {
+    color: #7B24D2; }
+    #overlay p a:hover {
+      color: #440381; }
 
 .hidden {
   display: none;
