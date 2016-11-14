@@ -5,12 +5,12 @@ body
       .col
         span.headline Jen
         span.headline Downs
+        p.pseudo-code(style="padding-top:15px;") // front-end developer at 
+          a(href="http://wearemammoth.com", target="_blank") We Are Mammoth
   section
     .flex-grid
       .col
-        p.pseudo-code // front-end developer at 
-          a(href="http://wearemammoth.com", target="_blank") We Are Mammoth
-  section
+        span.subhead My posts
     article
       .flex-grid
         .col
@@ -36,12 +36,34 @@ body
   section
     .flex-grid
       .col
+        span.subhead My work
+        p.pseudo-code // Here are a few examples of my work.
+        p.pseudo-code // Other projects are on  
+          a(href='mailto:hello@jendowns.com', target='_blank') my GitHub
+          | .
+    .flex-grid-second
+      .col
+        a(href="https://github.com/jendowns/email-layouts", target="_blank")
+          .project-wrapper
+            .project-fade
+            p.project-info
+              span Responsive Email Layouts
+            img(src="/wp-content/themes/portfolio/img/email-animation-2.gif")
+      .col
+        a(href="http://jessiedowns.com", target="_blank")
+          .project-wrapper
+            .project-fade
+            p.project-info
+              span Artist Gallery
+            img(src="/wp-content/themes/portfolio/img/jessie.png")
+  section
+    .flex-grid
+      .col
         #contact
           span.subhead Contact me
-          p You can reach me at 
+          p.pseudo-code // You can reach me at 
             a(href='mailto:hello@jendowns.com') hello@jendowns.com
-            | .
-          p Or you can use the form below.
+          p.pseudo-code // Or you can use the form below.
           br 
           #overlay-container
             #overlay.hidden

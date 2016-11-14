@@ -55,6 +55,9 @@ table {
 /* ------------------------------------------------------- */
 /* COLORS */
 /* FONT & HEADLINGS */
+* {
+  box-sizing: border-box; }
+
 p, span, div, strong, em {
   color: #440381;
   font-size: 20px;
@@ -176,6 +179,75 @@ small {
   flex: 1;
   max-width: 750px; }
 
+.flex-grid-second {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto; }
+  .flex-grid-second .col {
+    flex: 2;
+    width: 40%;
+    padding: 20px 0; }
+    .flex-grid-second .col:first-child {
+      padding-right: 20px; }
+    .flex-grid-second .col .project-wrapper {
+      display: block;
+      position: relative;
+      line-height: 0;
+      margin: 0;
+      padding: 0; }
+    .flex-grid-second .col .project-fade {
+      background-color: #7B24D2;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      visibility: visible;
+      opacity: 0;
+      transition: all .25s ease-in-out;
+      -moz-transition: opacity .25s ease-in-out;
+      -webkit-transition: opacity .25s ease-in-out; }
+    .flex-grid-second .col p.project-info {
+      opacity: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 120px;
+      text-align: center;
+      width: 75%;
+      /*
+			span:last-child{
+				color: #fff;
+	        	font-size: 20px;
+	        	font-style: italic;
+	        	font-weight: bold;
+			}
+			*/ }
+      .flex-grid-second .col p.project-info span:first-child {
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: normal;
+        font-family: 'PT Mono', monospace;
+        color: #fff; }
+    .flex-grid-second .col a:hover .project-fade {
+      opacity: 0.8; }
+    .flex-grid-second .col a:hover p.project-info {
+      opacity: 1;
+      transition: all .35s ease-in-out;
+      -moz-transition: opacity .35s ease-in-out;
+      -webkit-transition: opacity .35s ease-in-out; }
+    .flex-grid-second .col img {
+      max-width: 420px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #7B24D2; }
+
 .flex-grid-third {
   display: flex;
   justify-content: center;
@@ -196,26 +268,16 @@ footer .col {
   text-align: center; }
 
 section:first-child {
-  background-color: #00FEC9; }
+  background-color: #00FEC9;
+  padding: 50px 0; }
 
 section:nth-child(2) {
-  background-color: #d7fdf0;
-  min-height: 100px; }
-
-section:nth-child(3) {
   min-height: 100px;
-  /*
-	article:nth-child(even) {
-		background-color: $beige;
-	}
-	article:nth-child(odd) {
-		background-color: $light-beige;
-	}
-	*/ }
-  section:nth-child(3) article {
-    padding: 50px 0;
-    background-color: #FFFCFA; }
-    section:nth-child(3) article h2:before {
+  background-color: #fff;
+  padding: 50px 0; }
+  section:nth-child(2) article {
+    padding: 10px 0; }
+    section:nth-child(2) article h2:before {
       content: "#";
       font-size: 30px;
       font-family: 'PT Mono', monospace;
@@ -224,6 +286,10 @@ section:nth-child(3) {
       margin-left: -1.25em;
       padding-right: 0.65em;
       padding-top: 5px; }
+
+section:nth-child(3) {
+  background-color: #FFFCFA;
+  padding: 50px 0; }
 
 section:nth-child(4) {
   background-color: #FFEFE4;
@@ -262,7 +328,7 @@ section:nth-child(6) {
   font-size: 16px;
   background-color: #fefefe; }
   #contact input.wpcf7-not-valid, #contact textarea.wpcf7-not-valid {
-    border: 3px solid #ef476f; }
+    border: 2px solid #ef476f; }
 
 #contact input.wpcf7-submit {
   float: none;
@@ -353,7 +419,7 @@ section:nth-child(6) {
 
 @media (max-width: 600px) {
   section {
-    padding: 5px; }
+    padding: 20px 5px !important; }
   h2 {
     line-height: 1.25; }
   section:nth-child(4) {
@@ -370,7 +436,20 @@ section:nth-child(6) {
     display: block; }
     .flex-grid .col {
       width: auto; }
+  .flex-grid-second {
+    display: block; }
+    .flex-grid-second .col {
+      width: 75%;
+      text-align: center;
+      margin: 0 auto;
+      padding: 10px !important; }
+      .flex-grid-second .col > a {
+        display: inline-block; }
   a.btn {
     float: none; } }
+
+@media (max-width: 600px) {
+  .flex-grid-second .col {
+    width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */
