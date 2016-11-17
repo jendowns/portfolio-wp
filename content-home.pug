@@ -5,8 +5,7 @@ body
       .col
         span.headline Jen
         span.headline Downs
-        p.pseudo-code(style="padding-top:15px;") // front-end developer at 
-          a(href="http://wearemammoth.com", target="_blank", class="text-link") We Are Mammoth
+        p.pseudo-code(style="padding-top:15px;") // front-end developer
   section
     .flex-grid
       .col
@@ -36,11 +35,12 @@ body
   section
     .flex-grid
       .col
-        span.subhead My work
-        p.pseudo-code // Here are a few examples of my work.
-        p.pseudo-code // Other projects are on  
-          a(href='mailto:hello@jendowns.com', target='_blank', class='text-link') my GitHub
-          | .
+        .section-heading
+          span.subhead My work
+          p.pseudo-code // Here are a few examples of my work.
+          p.pseudo-code // Other projects are on  
+            a(href='mailto:hello@jendowns.com', target='_blank', class='text-link') my GitHub
+            | .
     .flex-grid-second
       .col
         a(href="https://github.com/jendowns/email-layouts", target="_blank")
@@ -68,17 +68,16 @@ body
     .flex-grid
       .col
         #contact
-          span.subhead Contact me
-          p.pseudo-code // You can reach me at 
-            a(href='mailto:hello@jendowns.com', class='text-link') hello@jendowns.com
-          p.pseudo-code // Or you can use the form below.
-          br 
+          .section-heading
+            span.subhead Contact me
+            p.pseudo-code // You can reach me at 
+              a(href='mailto:hello@jendowns.com', class='text-link') hello@jendowns.com
+            p.pseudo-code // Or you can use the form below.
           #overlay-container
             #overlay.hidden
               p
                 span thank you
-            <?php echo do_shortcode( '[contact-form-7 id="7" title="Contact Form"]' ); ?>  
-  
+            <?php echo do_shortcode( '[contact-form-7 id="7" title="Contact Form"]' ); ?>
   section
     .flex-grid-third
       .col
