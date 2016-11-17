@@ -144,7 +144,7 @@ em {
 a {
 	background-color: transparent;
 	color: $purple;
-	text-decoration: underline;
+	text-decoration: none;
 	font-family: 'PT Mono', monospace;
 	font-size: 24px;
 	font-weight: bold;
@@ -153,6 +153,25 @@ a {
 		color: $dark-purple;
 	}
 }
+
+a.text-link {
+	padding-bottom: 4px;
+	border-bottom: 0px solid transparent;
+
+	&:hover, &:focus {
+		border-bottom: 3px solid $purple;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+}
+
+footer a.text-link {
+	&:hover, &:focus {
+		border-bottom: 3px solid $green;
+	}
+}
+
 small a {
 	font-size: 13px;
 	color: $green;
@@ -220,18 +239,17 @@ small {
 .flex-grid-second {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	width: 100%;
 	max-width: 750px;
 	margin: 0 auto;
+	position: relative;
 
 	.col {
-		flex: 2;
+		flex: 1;
+		flex-basis: 45%;
 		width: 40%;
-		padding: 20px 0;
-
-		&:first-child {
-			padding-right: 20px;
-		}
+		padding: 10px;
 
 		.project-wrapper {
 			display: block;
@@ -304,6 +322,7 @@ small {
 .flex-grid-third {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	min-height: 100px;
 	max-width: 320px;
 	margin: 0 auto;

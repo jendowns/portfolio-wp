@@ -117,12 +117,24 @@ em {
 a {
   background-color: transparent;
   color: #7B24D2;
-  text-decoration: underline;
+  text-decoration: none;
   font-family: 'PT Mono', monospace;
   font-size: 24px;
   font-weight: bold; }
   a:hover, a:focus {
     color: #440381; }
+
+a.text-link {
+  padding-bottom: 4px;
+  border-bottom: 0px solid transparent; }
+  a.text-link:hover, a.text-link:focus {
+    border-bottom: 3px solid #7B24D2;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s; }
+
+footer a.text-link:hover, footer a.text-link:focus {
+  border-bottom: 3px solid #00FEC9; }
 
 small a {
   font-size: 13px;
@@ -182,15 +194,16 @@ small {
 .flex-grid-second {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 750px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
   .flex-grid-second .col {
-    flex: 2;
+    flex: 1;
+    flex-basis: 45%;
     width: 40%;
-    padding: 20px 0; }
-    .flex-grid-second .col:first-child {
-      padding-right: 20px; }
+    padding: 10px; }
     .flex-grid-second .col .project-wrapper {
       display: block;
       position: relative;
@@ -251,6 +264,7 @@ small {
 .flex-grid-third {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   min-height: 100px;
   max-width: 320px;
   margin: 0 auto; }

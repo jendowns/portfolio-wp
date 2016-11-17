@@ -6,7 +6,7 @@ body
         span.headline Jen
         span.headline Downs
         p.pseudo-code(style="padding-top:15px;") // front-end developer at 
-          a(href="http://wearemammoth.com", target="_blank") We Are Mammoth
+          a(href="http://wearemammoth.com", target="_blank", class="text-link") We Are Mammoth
   section
     .flex-grid
       .col
@@ -39,7 +39,7 @@ body
         span.subhead My work
         p.pseudo-code // Here are a few examples of my work.
         p.pseudo-code // Other projects are on  
-          a(href='mailto:hello@jendowns.com', target='_blank') my GitHub
+          a(href='mailto:hello@jendowns.com', target='_blank', class='text-link') my GitHub
           | .
     .flex-grid-second
       .col
@@ -56,13 +56,21 @@ body
             p.project-info
               span Artist Gallery
             img(src="/wp-content/themes/portfolio/img/jessie.png")
+      .col
+        a(href="http://www.wearemammoth.com/blog", target="_blank")
+          .project-wrapper
+            .project-fade
+            p.project-info
+              span Blog
+            img(src="/wp-content/themes/portfolio/img/example-wam.png")
+      .col
   section
     .flex-grid
       .col
         #contact
           span.subhead Contact me
           p.pseudo-code // You can reach me at 
-            a(href='mailto:hello@jendowns.com') hello@jendowns.com
+            a(href='mailto:hello@jendowns.com', class='text-link') hello@jendowns.com
           p.pseudo-code // Or you can use the form below.
           br 
           #overlay-container
@@ -87,7 +95,7 @@ body
       .flex-grid
         .col
           small &copy; 2016 Jen Downs. Palette via 
-            a(href='http://www.vanschneider.com/colors/', target='_blank') ColorClaim
+            a(href='http://www.vanschneider.com/colors/', target='_blank', class='text-link') ColorClaim
   script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', type='text/javascript')
   script(type='text/javascript').
     $("#contact .wpcf7-form").submit(function(event) {
