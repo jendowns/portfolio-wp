@@ -529,7 +529,7 @@ footer {
 	}
 
 	.wpcf7-not-valid-tip {
-		font-size: 18px;
+		font-size: 14px;
 		color: #ef476f;
 		padding: 5px 10px;
 		font-style: italic;
@@ -537,7 +537,6 @@ footer {
 	}
 	.wpcf7-response-output {
 		font-size: 18px;
-		line-height: 25px;
 		color: $purple;
 		padding: 20px 5px 5px 5px;
 		font-weight: 700;
@@ -552,6 +551,11 @@ footer {
 
 		&.wpcf7-validation-errors {
 			color: #ef476f;
+		}
+
+		&.wpcf7-mail-sent-ok {
+			display: none;
+			visibility: hidden;
 		}
 	}
 }
@@ -580,16 +584,19 @@ footer {
   padding-bottom: 20px;
 }
 
+#send-another-message:hover {
+	cursor: pointer;
+}
+
 .overlay p {
-    padding: 5px;
-    border-radius: 5px;
     color: #222;
-    font-size: 30px;
+    font-size: 32px;
     background-color: transparent;
     font-family: 'PT Sans Caption', sans-serif;
     font-weight: 700;
     position: relative;
     top: 30%;
+    text-align: center;
 
     a {
     	color: $purple;
@@ -604,92 +611,6 @@ footer {
 	display: none !important;
 	visibility: hidden !important;
 }
-
-/* andyet */
-
-$pink: #ED1588;
-
-.andyet section {
-	background-color: $beige;
-	padding: 60px 0;
-
-	.flex-grid {
-		max-width: 750px;
-		margin: 60px auto 0 auto;
-
-		.col {
-			border-top: none;
-			width: 100%;
-			margin: 0;
-			padding: 20px 40px;
-			border-left: 1px solid $pink;
-			border-right: 1px solid $pink;
-			border-bottom: 1px solid $pink;
-			min-height: 66px;
-
-			&:first-child {
-				&:hover {
-					background-color: $beige;
-				}
-			}
-
-			&:hover {
-				background-color: #ffe5d4;
-			}
-
-			p {
-				opacity: 0.9;
-				font-size: 14px;
-				line-height: 20px;
-				font-family: 'Source Sans Pro', sans-serif;
-				font-weight: 300;
-			}
-
-			&.data-header {
-				border: 1px solid $pink;
-				height: 80px;
-
-				.data-row {
-					padding-left: 20px;
-				}
-
-				p {
-					font-size: 20px;
-					text-transform: uppercase;
-					color: $pink;
-					text-align: left;
-					line-height: 60px;
-					font-weight: 400;
-				}
-			}
-		}
-	}
-
-	.score-circle {
-		background-color: $pink;
-		width: 45px;
-		height: 45px;
-		border-radius: 45px;
-		float: left;
-		margin-top: 5px;
-		text-align: center;
-
-		span {
-			line-height: 45px;
-			font-size: 18px;
-			color: #fff;
-			font-weight: 400;
-		}
-	}
-
-	.data-row {
-		width: 100%;
-		padding-left: 75px;
-		display: block;
-	}
-}
-
-
 
 
 /* MOBILE */

@@ -118,10 +118,12 @@ body
           #overlay-container
             .overlay.overlay-loading.hidden
               p
-                i.fa.fa-spinner.fa-spin
+                i.fa.fa-cog.fa-spin.fa-2x(style="opacity:0.75;")
             .overlay.overlay-thanks.hidden
               p
-                span thank you
+                span Thank you for your message!
+              p 
+                a#send-another-message.text-link Send another?
             <?php echo do_shortcode( '[contact-form-7 id="7" title="Contact Form"]' ); ?>
   
   footer
@@ -150,16 +152,18 @@ body
       if(!$('form.wpcf7-form').hasClass('invalid'))
         $("#overlay-container .overlay-thanks").removeClass("hidden");
     }
-
-    $("#contact .wpcf7-form").submit(function(event) {
+    $("#contact .wpcf7-form").submit(function(event){
       $("#overlay-container .overlay-loading").removeClass("hidden");
+    });
+    $("#send-another-message").on("click", function(){
+      $("#overlay-container .overlay-thanks").addClass("hidden");
     });
     $(".square.minimize").on("click", function(){
       var elem = $(this).parents(".project-wrapper");
       $(elem).toggleClass("collapsed");
       $(this).find(".fa-window-maximize, .fa-window-minimize").toggleClass("hidden");
     });
-    if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+    if (navigator.userAgent.indexOf('Mac OS X') != -1){
       window.location.hash = "👾👾👾";
     }
     
