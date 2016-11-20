@@ -54,57 +54,53 @@ body
           .project-wrapper
             .toolbar
               .toolbar-title Blog
-              a(href="http://www.wearemammoth.com/blog", target="_blank")
-                .square
-                  .fa.fa-external-link(aria-hidden="true")
               .square.minimize
                 .fa.fa-window-minimize(aria-hidden="true")
                 .fa.fa-window-maximize.hidden(aria-hidden="true")
+              .square.next
+                .fa.fa-chevron-right(aria-hidden="true")              
+              .square.prev
+                .fa.fa-chevron-left(aria-hidden="true")
             a(href="http://www.wearemammoth.com/blog", target="_blank")
               .project-image-wrapper
-                img(src="/wp-content/themes/portfolio/img/example-wam-1.png")
-                img.reveal-on-hover(src="/wp-content/themes/portfolio/img/example-wam-2.png")
+                img.faded-in(src="/wp-content/themes/portfolio/img/example-wam-1.png")
+                img(src="/wp-content/themes/portfolio/img/example-wam-2.png")
         .col
           .project-wrapper
             .toolbar
               .toolbar-title Artist Gallery
-              a(href="http://jessiedowns.com", target="_blank")
-                .square
-                  .fa.fa-external-link(aria-hidden="true")
               .square.minimize
                 .fa.fa-window-minimize(aria-hidden="true")
                 .fa.fa-window-maximize.hidden(aria-hidden="true")
+              .square.next
+                .fa.fa-chevron-right(aria-hidden="true")              
+              .square.prev
+                .fa.fa-chevron-left(aria-hidden="true")
             a(href="http://jessiedowns.com", target="_blank")
               .project-image-wrapper
-                img(src="/wp-content/themes/portfolio/img/example-jessie-1.png")
-                img.reveal-on-hover(src="/wp-content/themes/portfolio/img/example-jessie-2.png")
+                img.faded-in(src="/wp-content/themes/portfolio/img/example-jessie-1.png")
+                img(src="/wp-content/themes/portfolio/img/example-jessie-2.png")
       .flex-grid.half
         .col
           .project-wrapper
             .toolbar
               .toolbar-title Email Templates
-              a(href="https://github.com/jendowns/email-layouts", target="_blank")
-                .square
-                  .fa.fa-external-link(aria-hidden="true")
               .square.minimize
                 .fa.fa-window-minimize(aria-hidden="true")
                 .fa.fa-window-maximize.hidden(aria-hidden="true")
             a(href="https://github.com/jendowns/email-layouts", target="_blank")
               .project-image-wrapper
-                img(src="/wp-content/themes/portfolio/img/email-animation-2.gif")
+                img.faded-in(src="/wp-content/themes/portfolio/img/email-animation-2.gif")
         .col
           .project-wrapper
             .toolbar
               .toolbar-title 2D Game
-              a(href="https://github.com/jendowns/2d-unity-hopper", target="_blank")
-                .square
-                  .fa.fa-external-link(aria-hidden="true")
               .square.minimize
                 .fa.fa-window-minimize(aria-hidden="true")
                 .fa.fa-window-maximize.hidden(aria-hidden="true")
             a(href="https://github.com/jendowns/2d-unity-hopper", target="_blank")
               .project-image-wrapper
-                img(src="/wp-content/themes/portfolio/img/hopper.png")
+                img.faded-in(src="/wp-content/themes/portfolio/img/hopper.png")
   
   section#contact
     .section-head
@@ -145,26 +141,7 @@ body
 
   
   script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', type='text/javascript')
-  script(type='text/javascript').
-    // check if this page load was a post-back
-    if(decodeURIComponent(window.location.hash).toLowerCase() === '#contact'){
-      // only reveal "thank you" message if the form passed server-side validation(s)
-      if(!$('form.wpcf7-form').hasClass('invalid'))
-        $("#overlay-container .overlay-thanks").removeClass("hidden");
-    }
-    $("#contact .wpcf7-form").submit(function(event){
-      $("#overlay-container .overlay-loading").removeClass("hidden");
-    });
-    $("#send-another-message").on("click", function(){
-      $("#overlay-container .overlay-thanks").addClass("hidden");
-    });
-    $(".square.minimize").on("click", function(){
-      var elem = $(this).parents(".project-wrapper");
-      $(elem).toggleClass("collapsed");
-      $(this).find(".fa-window-maximize, .fa-window-minimize").toggleClass("hidden");
-    });
-    if (navigator.userAgent.indexOf('Mac OS X') != -1){
-      window.location.hash = "👾👾👾";
-    }
+  script(src='/wp-content/themes/portfolio/js/util.js' type='text/javascript')
+  script(src='/wp-content/themes/portfolio/js/home.js' type='text/javascript')
     
 

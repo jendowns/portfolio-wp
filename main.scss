@@ -330,6 +330,14 @@ small {
 			.toolbar-title {
 				opacity: 0.75;
 			}
+
+			.square.next, .square.prev {
+				&, &:hover, .fa {
+					opacity: 0.75;
+					cursor: default;
+					background-color: $beige;
+				}
+			}
 	    }
 	}
 
@@ -340,6 +348,21 @@ small {
 		border-top: 0;
 		max-width: 750px;
 		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0;
+
+		&:first-child {
+			position: relative;
+		}
+
+		&.faded-in {
+			opacity: 1;
+			transition: opacity .5s ease-out;
+		   -moz-transition: opacity .5s ease-out;
+		   -webkit-transition: opacity .5s ease-out;
+		}
 	}
 }
 
@@ -361,26 +384,25 @@ small {
 		text-transform: uppercase;
 	}
 
-	& > .square { // minimize icon
-		border-right: 0 !important;
-	}
-
 	.square {
 		background-color: $green;
-		border: 2px solid $purple;
+		border-left: 2px solid $purple;
+		border-top: 2px solid $purple;
+		border-bottom: 2px solid $purple;
+		border-right: none;
 	    width: 40px;
 	    height: 100%;
 	    text-align: center;
 	    float: right;
-	}
 
-	a:hover .square {
-		background-color: darken($green,10%);
-	}
+	    &:hover {
+			cursor: pointer;
+			background-color: darken($green,10%);
+		}
 
-	.square.minimize:hover  {
-		cursor: pointer;
-		background-color: darken($green,10%);
+		&.minimize { // last button
+			border-right: 2px solid $purple;
+		}
 	}
 
 	.fa {
@@ -395,33 +417,8 @@ small {
 	    &.fa-window-minimize {
 	    	margin-bottom: 4px;
 	    }
-	    &.fa-external-link {
-	    	margin-bottom: -2px;
-	    }
 	}
 }
-
-.reveal-on-hover {
-	width: 100%;
-	max-width: 600px;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: none;
-	visibility: hidden;
-	opacity: 0;
-  	transition: visibility 0s, opacity 0.5s linear;
-}
-
-a:hover {
-	.reveal-on-hover {
-		display: block;
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
 
 /*  FOOTER  */
 
