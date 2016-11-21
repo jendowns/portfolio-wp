@@ -1,6 +1,11 @@
 
 body
   
+  nav.hidden
+    .flex-grid
+      .col
+        span testing
+
   header
     .flex-grid
       .col
@@ -11,38 +16,43 @@ body
     .section-head
       .flex-grid
         .col
-          span.section-heading My posts
+          span.section-heading My Posts
     .section-body
+      
+      <?php include 'part-post-card.php';?>
+
       article
         .flex-grid
           .col
             .card
-              h2 Creating a Sidebar of Categories and Posts in WordPress
-              h3 October 20, 2016
+              a(href='/wordpress-sidebar', target='_blank')
+                h2 Creating a Sidebar of Categories and Posts in WordPress
+              span.date October 20, 2016
               p I wrote about using PHP to generate a side navigation menu, with categories as dropdown triggers and posts as dropdown list items.
               p.cta
                 a.btn(href='/wordpress-sidebar', target='_blank') 
                   | Read More &nbsp;
-                  i.fa.fa-external-link
+                  i.icon.icon-open(aria-hidden="true") 
       article
         .flex-grid
           .col
             .card
-              h2 2D Arcade Game in JavaScript with Unity 5
-              h3 April 1, 2016
+              a(href='/unity-arcade-game', target='_blank')
+                h2 2D Arcade Game in JavaScript with Unity 5
+              span.date April 1, 2016
               p Using the Unity 5 engine, I made a 2D arcade game. And it's written in JavaScript! (Well, Unity's
                 em  flavor 
                 | of JavaScript.) I wrote an article for The Recompiler about how I made this game, including my planning and some of the trickier development challenges.
               p.cta
                 a.btn(href='/unity-arcade-game', target='_blank') 
                   | Read More &nbsp;
-                  i.fa.fa-external-link
+                  i.icon.icon-open(aria-hidden="true") 
   
   section#work
     .section-head
       .flex-grid.half
         .col
-          span.section-heading My work
+          span.section-heading My Work
           .card
             p Here are a few examples of my work.
             p Other projects are on  
@@ -55,12 +65,12 @@ body
             .toolbar
               .toolbar-title Blog
               .square.minimize
-                .fa.fa-window-minimize(aria-hidden="true")
-                .fa.fa-window-maximize.hidden(aria-hidden="true")
+                i.icon.icon-minimize(aria-hidden="true") 
+                i.icon.icon-maximize.hidden(aria-hidden="true") 
               .square.next
-                .fa.fa-chevron-right(aria-hidden="true")              
+                i.icon.icon-arrow-right(aria-hidden="true")              
               .square.prev
-                .fa.fa-chevron-left(aria-hidden="true")
+                i.icon.icon-arrow-left(aria-hidden="true") 
             a(href="http://www.wearemammoth.com/blog", target="_blank")
               .project-image-wrapper
                 img.faded-in(src="/wp-content/themes/portfolio/img/example-wam-1.png")
@@ -70,12 +80,12 @@ body
             .toolbar
               .toolbar-title Artist Gallery
               .square.minimize
-                .fa.fa-window-minimize(aria-hidden="true")
-                .fa.fa-window-maximize.hidden(aria-hidden="true")
+                i.icon.icon-minimize(aria-hidden="true") 
+                i.icon.icon-maximize.hidden(aria-hidden="true") 
               .square.next
-                .fa.fa-chevron-right(aria-hidden="true")              
+                i.icon.icon-arrow-right(aria-hidden="true")              
               .square.prev
-                .fa.fa-chevron-left(aria-hidden="true")
+                i.icon.icon-arrow-left(aria-hidden="true") 
             a(href="http://jessiedowns.com", target="_blank")
               .project-image-wrapper
                 img.faded-in(src="/wp-content/themes/portfolio/img/example-jessie-1.png")
@@ -86,8 +96,8 @@ body
             .toolbar
               .toolbar-title Email Templates
               .square.minimize
-                .fa.fa-window-minimize(aria-hidden="true")
-                .fa.fa-window-maximize.hidden(aria-hidden="true")
+                i.icon.icon-minimize(aria-hidden="true") 
+                i.icon.icon-maximize.hidden(aria-hidden="true") 
             a(href="https://github.com/jendowns/email-layouts", target="_blank")
               .project-image-wrapper
                 img.faded-in(src="/wp-content/themes/portfolio/img/email-animation-2.gif")
@@ -96,8 +106,8 @@ body
             .toolbar
               .toolbar-title 2D Game
               .square.minimize
-                .fa.fa-window-minimize(aria-hidden="true")
-                .fa.fa-window-maximize.hidden(aria-hidden="true")
+                i.icon.icon-minimize(aria-hidden="true") 
+                i.icon.icon-maximize.hidden(aria-hidden="true") 
             a(href="https://github.com/jendowns/2d-unity-hopper", target="_blank")
               .project-image-wrapper
                 img.faded-in(src="/wp-content/themes/portfolio/img/hopper.png")
@@ -106,15 +116,15 @@ body
     .section-head
       .flex-grid
         .col
-          span.section-heading Contact me
-        .col.card 
+          span.section-heading Contact Me
+        .col.card#contact-form
           p You can reach me at 
             a(href='mailto:hello@jendowns.com', class='text-link') hello@jendowns.com
           p Or you can use the form below.
           #overlay-container
             .overlay.overlay-loading.hidden
               p
-                i.fa.fa-cog.fa-spin.fa-2x(style="opacity:0.75;")
+                i.icon.icon-loader(style="opacity:0.75;")
             .overlay.overlay-thanks.hidden
               p
                 span Thank you for your message!
@@ -133,11 +143,11 @@ body
               a(href='http://www.vanschneider.com/colors/', target='_blank', class='text-link') ColorClaim
         .col.align-right.sm-icons
           a(href='https://www.twitter.com/jenisora', target='_blank', title='Twitter')
-            i.fa.fa-twitter(aria-hidden="true")
+            i.icon.icon-twitter(aria-hidden="true") 
           a(href='https://www.linkedin.com/in/jendowns', target='_blank', title='LinkedIn')
-            i.fa.fa-linkedin(aria-hidden="true")    
+            i.icon.icon-linkedin2(aria-hidden="true")    
           a(href='https://www.github.com/jendowns', target='_blank', title='GitHub')
-            i.fa.fa-github(aria-hidden="true")
+            i.icon.icon-github(aria-hidden="true") 
 
   
   script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', type='text/javascript')

@@ -57,6 +57,79 @@ table {
 	border-spacing: 0;
 }
 
+/* ------------------------------------------------------- */
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?weykhe');
+  src:  url('fonts/icomoon.eot?weykhe#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?weykhe') format('woff2'),
+    url('fonts/icomoon.ttf?weykhe') format('truetype'),
+    url('fonts/icomoon.woff?weykhe') format('woff'),
+    url('fonts/icomoon.svg?weykhe#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+.icon-calendar-full:before {
+  content: "\e836";
+}
+.icon-heart:before {
+  content: "\e024";
+}
+.icon-cloud-download:before {
+  content: "\e067";
+}
+.icon-tag:before {
+  content: "\e085";
+}
+.icon-command:before {
+  content: "\e087";
+}
+.icon-arrow-left:before {
+  content: "\e094";
+}
+.icon-arrow-right:before {
+  content: "\e095";
+}
+.icon-loader:before {
+  content: "\e105";
+}
+.icon-maximize:before {
+  content: "\e112";
+}
+.icon-minimize:before {
+  content: "\e113";
+}
+.icon-open:before {
+  content: "\e128";
+}
+
 
 /* ------------------------------------------------------- */
 
@@ -90,11 +163,7 @@ footer {
 	padding: 60px 20px;
 }
 
-section, header, footer {
-}
-
-
-/* FONT & HEADLINGS */
+/* FONT & HEADINGS */
 
 * {
 	box-sizing: border-box;
@@ -106,6 +175,22 @@ p, span, div, strong, em {
 	font-family: 'PT Sans Caption', sans-serif;
 	line-height: 1.7;
 }
+
+::selection {
+	background-color: $light-green;
+}
+::-moz-selection {
+	background: $light-green;
+}
+footer {
+	::selection {
+	background-color: $purple;
+	}
+	::-moz-selection {
+		background: $purple;
+	}
+}
+
 .site-heading, .section-heading {
 	display: table;
 	font-weight: 700;
@@ -165,6 +250,31 @@ em {
 	font-family: 'PT Sans Caption', sans-serif;
 	font-style: italic;
 }
+.spin {
+ 	-webkit-animation: spin 1500ms infinite linear;
+    animation: spin 1500ms infinite linear;
+    display: inline-block;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
 
 
 
@@ -184,7 +294,7 @@ a {
 }
 
 a.text-link {
-	padding-bottom: 3px;
+	padding-bottom: 2px;
 	border-bottom: 0px solid transparent;
 
 	&:hover, &:focus {
@@ -244,12 +354,36 @@ a.btn, .wpcf7-submit {
 		-moz-transition: all 0.3s;
 		transition: all 0.3s;
 	}
+
+	.icon {
+		color: $purple;
+		font-size: 18px;
+	}
 }
 small {
 	font-size: 14px;
 	line-height: 14px;
 	color: $light-beige;
 	font-family: 'PT Sans Caption', sans-serif;
+}
+
+.icon-maximize, .icon-minimize {
+	transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+}
+span.date {
+	font-size: 14px;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #666;
+
+	&:before {
+		content: "\e836";
+		font-family: "icomoon";
+		padding-right: 7px;
+	}
 }
 
 
@@ -271,6 +405,10 @@ small {
   margin: 15px 0;
 }
 
+article .col {
+	width: 100%;
+}
+
 .card {
 	padding: 20px 30px;
 	background-color: $light-beige;
@@ -288,6 +426,73 @@ small {
 }
 .section-head .flex-grid.half .col:first-child {
 	margin-right: 0 !important;
+}
+
+
+/* NAV  */
+
+nav {
+	background-color: $green;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 23;
+	width: 100%;
+	box-shadow: 0px 4px 0px rgba(0,0,0,0.1);
+
+	a {
+		color: $purple;
+		weight: 600;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	li {
+		display: inline-block;
+		padding-right: 10px;
+		padding-left: 10px;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	a, span {
+		line-height: 50px;
+	}
+
+	.flex-grid {
+		max-width: 1000px;
+		margin: 0 auto;
+
+		.col {
+			margin: 0;
+		}
+	}
+
+	.nav-heading {
+		padding: 5px 12px;
+		background-color: $purple;
+		color: $green;
+		font-family: 'PT Mono', monospace;
+		font-size: 16px;
+		text-transform: uppercase;
+		line-height: 50px;
+		letter-spacing: 2px;
+	}
+
+	.nav-left {
+		padding-left: 20px;
+		float: left;
+	}
+	.nav-right {
+		padding-right: 20px;
+		float: right;
+	}
 }
 
 
@@ -332,7 +537,7 @@ small {
 			}
 
 			.square.next, .square.prev {
-				&, &:hover, .fa {
+				&, &:hover, .icon {
 					opacity: 0.75;
 					cursor: default;
 					background-color: $beige;
@@ -394,6 +599,7 @@ small {
 	    height: 100%;
 	    text-align: center;
 	    float: right;
+	    overflow: hidden;
 
 	    &:hover {
 			cursor: pointer;
@@ -405,16 +611,17 @@ small {
 		}
 	}
 
-	.fa {
+	.icon {
 		display:inline-block;
 	    font-size: 20px;
+	    line-height: 35px;
 	    background-color: transparent;
 	    color:white;
 	    color: $purple;
 	    text-align: center;
 	    vertical-align: bottom;
 
-	    &.fa-window-minimize {
+	    &.icon-minimize {
 	    	margin-bottom: 4px;
 	    }
 	}
@@ -423,6 +630,9 @@ small {
 /*  FOOTER  */
 
 footer {
+	.flex-grid {
+		max-width: 1000px;
+	}
 	.sm-icons a {
 		font-size: 25px;
 		margin-left: 40px;
@@ -430,7 +640,7 @@ footer {
 
 		&:hover {
 			color: darken($green,10%);
-			border-bottom: 3px solid $green;
+			//border-bottom: 3px solid $green;
 			-webkit-transition: all 0.3s;
 			-moz-transition: all 0.3s;
 			transition: all 0.3s;
@@ -452,6 +662,9 @@ footer {
 #contact {
 	.section-head .col {
 		margin: 0;
+	}
+	.card {
+		overflow: hidden;
 	}
 	footer .align-left, footer .align-right {
 		text-align: left;
@@ -609,6 +822,45 @@ footer {
 	visibility: hidden !important;
 }
 
+strong {
+	font-weight: bold;
+}
+
+
+/*  Single posts */
+
+#single-post {
+	padding-top: 50px;
+
+	.post-content {
+		padding-top: 20px;
+	}
+
+	h2 {
+		font-size: 30px;
+	}
+
+	#posts .section-body .flex-grid { // main content
+		padding: 20px 30px;
+		background-color: #FFFCFA;
+		display: block;
+		box-shadow: 3px 3px 0 rgba(0,0,0,.1);
+	}
+
+	p {
+		padding-bottom: 20px;
+		line-height: default;
+		font-weight: 300;
+	}
+}
+
+.pull-right {
+	float: right;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 
 /* MOBILE */
 
@@ -696,6 +948,16 @@ footer {
 		}
 	}
 	a.btn { float: none; }
+
+	.pull-right {
+		float: none;
+		margin: 10px 0;
+	}
+
+	.col.nav-left {
+		display: none;
+		visibility: hidden;
+	}
 }
 
 

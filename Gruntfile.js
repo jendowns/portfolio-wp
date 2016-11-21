@@ -35,7 +35,8 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'content-header.php': ['content-header.pug'],
-                    'content-home.php': ['content-home.pug']
+                    'content-home.php': ['content-home.pug'],
+                    'single.php': ['single.pug']
                 }
             }
         }
