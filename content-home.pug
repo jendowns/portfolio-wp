@@ -1,10 +1,19 @@
 
 body
   
-  nav.hidden
+  nav.navbar(style="display: none;")
     .flex-grid
-      .col
-        span testing
+      .col.nav-left
+        a(href="/")
+          span.nav-heading Jen Downs
+      .col.nav-right
+        ul
+          li
+            a.text-link(href='/') Home
+          li
+            a.text-link(href='/#work') Projects
+          li
+            a.text-link(href='/#contact-form') Contact
 
   header
     .flex-grid
@@ -153,5 +162,16 @@ body
   script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', type='text/javascript')
   script(src='/wp-content/themes/portfolio/js/util.js' type='text/javascript')
   script(src='/wp-content/themes/portfolio/js/home.js' type='text/javascript')
+  script(type='text/javascript').
     
+    var on_scroll = debounce(function toggle_hidden_navbar(){
+        if ($(window).scrollTop() > 225) {
+          $('.navbar').fadeIn();
+        } else {
+          $('.navbar').fadeOut();
+        }
+    }, 150);
 
+    $(window).scroll(on_scroll);
+
+    
