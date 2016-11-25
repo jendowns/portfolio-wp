@@ -7,134 +7,6 @@ Version: 1.0
 */
 
 
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* ------------------------------------------------------- */
-
-
-@font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?weykhe');
-  src:  url('fonts/icomoon.eot?weykhe#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.woff2?weykhe') format('woff2'),
-    url('fonts/icomoon.ttf?weykhe') format('truetype'),
-    url('fonts/icomoon.woff?weykhe') format('woff'),
-    url('fonts/icomoon.svg?weykhe#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-twitter:before {
-  content: "\ea96";
-}
-.icon-github:before {
-  content: "\eab0";
-}
-.icon-linkedin2:before {
-  content: "\eaca";
-}
-.icon-calendar-full:before {
-  content: "\e836";
-}
-.icon-heart:before {
-  content: "\e024";
-}
-.icon-cloud-download:before {
-  content: "\e067";
-}
-.icon-tag:before {
-  content: "\e085";
-}
-.icon-command:before {
-  content: "\e087";
-}
-.icon-arrow-left:before {
-  content: "\e094";
-}
-.icon-arrow-right:before {
-  content: "\e095";
-}
-.icon-loader:before {
-  content: "\e105";
-}
-.icon-maximize:before {
-  content: "\e112";
-}
-.icon-minimize:before {
-  content: "\e113";
-}
-.icon-open:before {
-  content: "\e128";
-}
-
-
-/* ------------------------------------------------------- */
-
-
-
 /* COLORS */
 
 $green 			: #00FEC9; // turquoise-green
@@ -171,9 +43,9 @@ footer {
 
 p, span, div, strong, em {
 	color: #222;
-	font-size: 16px;
-	font-family: 'PT Sans Caption', sans-serif;
-	line-height: 1.7;
+	font-size: 18px;
+	font-family: 'DIN Next W01 Regular', sans-serif;
+	line-height: 1.33;
 }
 
 ::selection {
@@ -193,7 +65,7 @@ footer {
 
 .site-heading, .section-heading {
 	display: table;
-	font-weight: 700;
+	font-family: 'DIN Next W01 Bold', san-serif;
 	text-transform: uppercase;
 	box-shadow: 6px 6px 0px rgba(0,0,0,0.1);
 }
@@ -211,44 +83,38 @@ footer {
 .site-heading:nth-child(2){
 	font-size: 28px;
 	padding: 10px 20px;
+	font-family: 'DIN Next W01 Medium', san-serif;
 }
 .section-heading {
 	background-color: $purple;
 	color: $green;
-	font-family: 'PT Mono', monospace;
-	font-size: 26px;
+	font-family: 'DIN Next W01 Medium', san-serif;
+	font-size: 24px;
+	text-transform: uppercase;
 	letter-spacing: 3px;
 	line-height: 32px;
 	margin: 0 0 20px 0;
 	padding: 11px 22px;
-	text-transform: none;
 }
 .pseudo-code {
-	font-size: 16px;
+	font-size: 18px;
 	color: #222;
-	font-family: 'PT Sans Caption', sans-serif;
+	font-family: 'DIN Next W01 Regular', sans-serif;
 
-	a { font-size: 16px; }
+	a { font-size: 18px; }
 }
 h2 {
 	font-size: 25px;
-	font-family: 'PT Sans Caption', sans-serif;
+	font-family: 'DIN Next W01 Bold', sans-serif;
 	color: $dark-purple;
-	font-weight: 700;
 	padding-top: 15px;
-	padding-bottom: 10px;
+	padding-bottom: 0;
 	line-height: 32px;
 }
 h3 {
 	font-size: 18px;
-	font-family: 'PT Sans Caption', sans-serif;
+	font-family: 'DIN Next W01 Medium', sans-serif;
 	color: #444;
-	font-weight: 600;
-	font-style: italic;
-}
-em {
-	font-family: 'PT Sans Caption', sans-serif;
-	font-style: italic;
 }
 .spin {
  	-webkit-animation: spin 1500ms infinite linear;
@@ -283,9 +149,8 @@ em {
 a {
 	background-color: transparent;
 	color: $purple;
-	font-family: 'PT Sans Caption', sans-serif;
-	font-size: 16px;
-	font-weight: 700;
+	font-family: 'DIN Next W01 Bold', sans-serif;
+	font-size: 18px;
 	text-decoration: none;
 
 	&:hover, &:focus {
@@ -328,8 +193,7 @@ a.btn, .wpcf7-submit {
 	color: $purple;
 	font-size: 20px;
 	float: right;
-	font-family: 'PT Sans Caption', sans-serif;
-	font-weight: 700;
+	font-family: 'DIN Next W01 Bold', sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 	cursor: pointer;
@@ -364,7 +228,7 @@ small {
 	font-size: 14px;
 	line-height: 14px;
 	color: $light-beige;
-	font-family: 'PT Sans Caption', sans-serif;
+	font-family: 'DIN Next W01 Regular', sans-serif;
 }
 
 .icon-maximize, .icon-minimize {
@@ -375,9 +239,13 @@ small {
 }
 span.date {
 	font-size: 14px;
-	font-weight: 300;
+	font-family: 'DIN Next W01 Regular', sans-serif;
 	text-transform: uppercase;
 	color: #666;
+
+	& + p {
+		margin-top: 8px;
+	}
 
 	&:before {
 		content: "\e836";
@@ -402,7 +270,7 @@ span.date {
 }
 .col {
   //flex: 1;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 article .col {
@@ -479,7 +347,7 @@ nav {
 		background-color: $purple;
 		color: $green;
 		font-family: 'PT Mono', monospace;
-		font-size: 16px;
+		font-size: 18px;
 		text-transform: uppercase;
 		line-height: 50px;
 		letter-spacing: 2px;
@@ -581,7 +449,7 @@ nav {
 	.toolbar-title {
 		font-size: 14px;
 		line-height: 40px;
-		font-family: 'PT Sans Caption', sans-serif;
+		font-family: 'DIN Next W01 Regular', sans-serif;
 		color: $light-beige;
 		float: left;
 		margin-left: 20px;
@@ -646,6 +514,17 @@ footer {
 			transition: all 0.3s;
 		}
 	}
+	small {
+		display: block;
+
+		&, a {
+			font-size: 12px;
+		}
+
+		.icon-heart {
+			font-size: 11px;
+		}
+	}
 	.align-left {
 		text-align: left;
 	}
@@ -658,6 +537,11 @@ footer {
 /* ------------------------------------------------------ */
 /* ------------------------------------------------------ */
 
+#posts {
+	.section-head .col {
+		margin: 0;
+	}
+}
 
 #contact {
 	.section-head .col {
@@ -670,7 +554,7 @@ footer {
 		text-align: left;
 	}
 	form { 
-		padding: 25px 0;
+		padding: 25px 0 10px 0;
 		width: 100%;
 		//border: 2px solid $purple;
 		margin: 0 auto;
@@ -696,8 +580,8 @@ footer {
 		margin: 0;
 		padding: 5px;
 		box-sizing: border-box;
-		font-family: 'PT Sans Caption', sans-serif;
-		font-size: 16px;
+		font-family: 'DIN Next W01 Regular', sans-serif;
+		font-size: 18px;
 		background-color: rgba(123,36,210, 0.2);
 
 		&:focus {
@@ -723,6 +607,7 @@ footer {
 		padding: 10px 30px !important;
 		font-size: 20px;
 		background-color: $green !important;
+		font-family: 'DIN Next W01 Bold', sans-serif;
 
 		&:hover {
 			background-color: darken($green,5%) !important;
@@ -730,44 +615,40 @@ footer {
 	}
 
 	label {
-		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.25px;
 		color: $dark-purple;
 		font-size: 14px;
-		font-family: 'PT Sans Caption', sans-serif;
+		font-family: 'DIN Next W01 Bold', sans-serif;
 	}
+}
 
-	.wpcf7-not-valid-tip {
-		font-size: 14px;
-		color: #ef476f;
-		padding: 5px 10px;
-		font-style: italic;
-		font-family: 'PT Sans Caption', sans-serif;
-	}
-	.wpcf7-response-output {
-		font-size: 18px;
-		color: $purple;
-		padding: 20px 5px 5px 5px;
-		font-weight: 700;
-		font-style: italic;
-		font-family: 'PT Sans Caption', sans-serif;
-		display: inline-block;
+span.wpcf7-not-valid-tip {
+	font-size: 14px;
+	color: #ef476f;
+	padding: 5px 10px;
+	font-family: 'DIN Next W01 Bold', sans-serif;
+}
+.wpcf7-response-output {
+	font-size: 18px;
+	color: $purple;
+	padding: 0 !important;
+	margin: 0 !important;
+	border: none !important;
+	font-family: 'DIN Next W01 Bold', sans-serif;
+}
+	
+.wpcf7-display-none {
+	display: none;
+}
 
-		&.wpcf7-display-none {
-			display: none;
-			visibility: hidden;
-		}
+.wpcf7-validation-errors,
+.wpcf7-mail-sent-ng {
+	color: #ef476f;
+}
 
-		&.wpcf7-validation-errors {
-			color: #ef476f;
-		}
-
-		&.wpcf7-mail-sent-ok {
-			display: none;
-			visibility: hidden;
-		}
-	}
+.wpcf7-mail-sent-ok {
+	color: $purple;
 }
 
 .wpcf7-recaptcha > div {
@@ -798,32 +679,13 @@ footer {
 	cursor: pointer;
 }
 
-.overlay p {
-    color: #222;
-    font-size: 32px;
-    background-color: transparent;
-    font-family: 'PT Sans Caption', sans-serif;
-    font-weight: 700;
-    position: relative;
-    top: 30%;
-    text-align: center;
-
-    a {
-    	color: $purple;
-
-    	&:hover {
-    		color: $dark-purple;
-    	}
-    }
-}
-
 .hidden {
 	display: none !important;
 	visibility: hidden !important;
 }
 
 strong {
-	font-weight: bold;
+	font-family: 'DIN Next W01 Bold', san-serif !important;
 }
 
 
@@ -850,7 +712,6 @@ strong {
 	p {
 		padding-bottom: 20px;
 		line-height: default;
-		font-weight: 300;
 	}
 }
 
@@ -885,24 +746,20 @@ strong {
 		}
 	}
 	.section-heading {
-		font-size: 24px;
+		font-size: 22px;
 		letter-spacing: 3px;
-		line-height: 24px;
+		line-height: 22px;
 		padding: 12px 17px;
-		text-transform: none;
 	}
 	#work .section-body .flex-grid.half .col:first-child {
 		margin-right: 0;
-	}
-	.section-heading {
-		padding-bottom: 10px;
 	}
 	h2 {
 		line-height: 1.25;
 		font-size: 20px;
 	}
 	h3 {
-		font-size: 16px;
+		font-size: 18px;
 	}
 	#contact form {
 		width: 100%;
@@ -957,6 +814,16 @@ strong {
 	.col.nav-left {
 		display: none;
 		visibility: hidden;
+	}
+
+	footer .align-right.sm-icons {
+		text-align: left;
+
+		a {
+			margin-left: 0;
+			margin-right: 8px;
+			font-size: 20px;
+		}
 	}
 }
 

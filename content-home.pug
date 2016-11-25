@@ -13,7 +13,7 @@ body
           li
             a.text-link(href='/#work') Projects
           li
-            a.text-link(href='/#contact-form') Contact
+            a.text-link(href='/#contact') Contact
 
   header
     .flex-grid
@@ -37,7 +37,7 @@ body
               a(href='/wordpress-sidebar', target='_blank')
                 h2 Creating a Sidebar of Categories and Posts in WordPress
               span.date October 20, 2016
-              p I wrote about using PHP to generate a side navigation menu, with categories as dropdown triggers and posts as dropdown list items.
+              p I wrote about using PHP to generate a side navigation menu, with categories as dropdown triggers and posts as dropdown list items. By reimagining my data as a multi-level array, I was able iterate through a mixed collection of categories, posts within categories, subcategories, and posts within subcategories to populate the sidebar dynamically.
               p.cta
                 a.btn(href='/wordpress-sidebar', target='_blank') 
                   | Read More &nbsp;
@@ -49,9 +49,7 @@ body
               a(href='/unity-arcade-game', target='_blank')
                 h2 2D Arcade Game in JavaScript with Unity 5
               span.date April 1, 2016
-              p Using the Unity 5 engine, I made a 2D arcade game. And it's written in JavaScript! (Well, Unity's
-                em  flavor 
-                | of JavaScript.) I wrote an article for The Recompiler about how I made this game, including my planning and some of the trickier development challenges.
+              p Using the Unity 5 engine, I made a 2D arcade game. And it's written in JavaScript! (Well, Unity's flavor of JavaScript.) I wrote an article for The Recompiler about how I made this game, including my planning and some of the trickier development challenges.
               p.cta
                 a.btn(href='/unity-arcade-game', target='_blank') 
                   | Read More &nbsp;
@@ -84,6 +82,16 @@ body
               .project-image-wrapper
                 img.faded-in(src="/wp-content/themes/portfolio/img/example-wam-1.png")
                 img(src="/wp-content/themes/portfolio/img/example-wam-2.png")
+        .col
+          .project-wrapper
+            .toolbar
+              .toolbar-title Meal Plan Site (Design)
+              .square.minimize
+                i.icon.icon-minimize(aria-hidden="true") 
+                i.icon.icon-maximize.hidden(aria-hidden="true")
+            a(href="/wp-content/themes/portfolio/img/example-dash.png", target="_blank")
+              .project-image-wrapper
+                img.faded-in(src="/wp-content/themes/portfolio/img/example-dash.png")
         .col
           .project-wrapper
             .toolbar
@@ -126,30 +134,26 @@ body
       .flex-grid
         .col
           span.section-heading Contact Me
-        .col.card#contact-form
+        .col.card
           p You can reach me at 
             a(href='mailto:hello@jendowns.com', class='text-link') hello@jendowns.com
           p Or you can use the form below.
           #overlay-container
-            .overlay.overlay-loading.hidden
-              p
-                i.icon.icon-loader(style="opacity:0.75;")
-            .overlay.overlay-thanks.hidden
-              p
-                span Thank you for your message!
-              p 
-                a#send-another-message.text-link Send another?
-            <?php echo do_shortcode( '[contact-form-7 id="7" title="Contact Form"]' ); ?>
+            <?php echo do_shortcode('[contact-form-7 id="7" title="Contact Form"]'); ?>
   
   footer
     .section-body
       .flex-grid
         .col.align-left
           p
-            small &copy; 2016 Jen Downs.
+            small &copy; 2016 Jen Downs. 
+            small Made with 
+              i.icon.icon-heart
+              |  in Austin, TX.
             br
             small Palette via 
               a(href='http://www.vanschneider.com/colors/', target='_blank', class='text-link') ColorClaim
+              | .
         .col.align-right.sm-icons
           a(href='https://www.twitter.com/jenisora', target='_blank', title='Twitter')
             i.icon.icon-twitter(aria-hidden="true") 
@@ -157,7 +161,6 @@ body
             i.icon.icon-linkedin2(aria-hidden="true")    
           a(href='https://www.github.com/jendowns', target='_blank', title='GitHub')
             i.icon.icon-github(aria-hidden="true") 
-
   
   script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', type='text/javascript')
   script(src='/wp-content/themes/portfolio/js/util.js' type='text/javascript')
@@ -173,5 +176,7 @@ body
     }, 150);
 
     $(window).scroll(on_scroll);
+
+  <?php get_footer(); ?> 
 
     
