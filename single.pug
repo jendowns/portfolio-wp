@@ -7,14 +7,15 @@ body#single-post
 			.col.nav-left
 				a(href="/")
 					span.nav-heading Jen Downs
+					i.icon.icon-arrow-left(aria-hidden="true")
 			.col.nav-right
 				ul
-					li
-						a.text-link(href='/') Home
-					li
-						a.text-link(href='/#work') Projects
-					li
-						a.text-link(href='/#contact') Contact
+				li
+					a.text-link(href='/#posts') Thoughts
+				li
+					a.text-link(href='/#work') Projects
+				li
+					a.text-link(href='/#contact') Contact
 
 	section#posts
 		.section-body
@@ -31,10 +32,14 @@ body#single-post
 			.flex-grid
 				.col.align-left
 					p
-						small &copy; 2016 Jen Downs.
+						small &copy; 2016 Jen Downs. 
+						small Made with 
+							i.icon.icon-heart
+							|  in Austin, TX.
 						br
 						small Palette via 
 							a(href='http://www.vanschneider.com/colors/', target='_blank', class='text-link') ColorClaim
+							| .
 				.col.align-right.sm-icons
 					a(href='https://www.twitter.com/jenisora', target='_blank', title='Twitter')
 						i.icon.icon-twitter(aria-hidden="true") 

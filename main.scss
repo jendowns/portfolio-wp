@@ -10,21 +10,39 @@ Version: 1.0
 /* COLORS */
 
 $green 			: #00FEC9; // turquoise-green
-$light-green	: #d7fdf0; // light cyan
+//$light-green	: #d7fdf0; // light cyan
+$light-green	: #D1FFF5;
 
-$purple			: #7B24D2; // blue-violet
-$dark-purple	: #440381; // dark indigo
+//$purple		: #7B24D2; // blue-violet
+//$purple 		: #8641FF;
+//$purple 		: #7629FF;
+$purple 		: #760BFF;
+//$dark-purple	: #440381; // dark indigo
+//$dark-purple	: #34008f;
+$dark-purple	: #5207b5;
 
 $beige			: #FFEFE4; // linen
 $light-beige	: #FFFCFA; // snow
 
+$greenblue		: #00fcf8;
+
+$pink			: #f80a95;
+$faded-pink		: rgba(248,10,149, 0.3);
+$light-pink		: #fda2d7;
+
 header {
-	background-color: $green;
-	padding: 30px 20px 60px 20px;
+	background: linear-gradient(#00feb4,#30fffc);
+	background-color: $greenblue;
+	padding: 75px 20px 50px 20px;
 }
 #posts, #contact {
-	background-color: $beige;
 	padding: 60px 20px;
+}
+#posts {
+	background-color: $beige;
+}
+#contact{
+	background-color: $beige;
 }
 #work {
 	background-color: #ffe5d4;
@@ -49,10 +67,10 @@ p, span, div, strong, em {
 }
 
 ::selection {
-	background-color: $light-green;
+	background-color: $light-pink;
 }
 ::-moz-selection {
-	background: $light-green;
+	background: $light-pink;
 }
 footer {
 	::selection {
@@ -65,36 +83,41 @@ footer {
 
 .site-heading, .section-heading {
 	display: table;
-	font-family: 'DIN Next W01 Bold', san-serif;
+	font-family: 'DIN Next W01 Bold', sans-serif;
 	text-transform: uppercase;
-	box-shadow: 6px 6px 0px rgba(0,0,0,0.1);
+	//box-shadow: 3px 3px 0px rgba(246,16,103,.3);
 }
 .site-heading {
-	background-color: $purple;
-	color: $green;
-	font-family: 'PT Mono', monospace;
-	font-size: 48px;
+	background-color: transparet;
+	color: $purple;
+	font-family: 'DIN Next W01 Bold', sans-serif;
+	font-size: 50px;
 	letter-spacing: 5px;
 	line-height: 40px;
-	margin: 10px 0;	
-	padding: 15px 30px;
-	text-transform: uppercase;
+	margin: 0 auto;	
+	//padding: 15px 30px;
+	padding: 0;
+	text-transform: none;
 }
 .site-heading:nth-child(2){
-	font-size: 28px;
-	padding: 10px 20px;
-	font-family: 'DIN Next W01 Medium', san-serif;
+	font-size: 20px;
+	//padding: 5px 15px;
+	padding: 0;
+	text-transform: uppercase;
+	color: light($purple, 5%);
+	font-family: 'DIN Next W01 Medium', sans-serif;
 }
 .section-heading {
 	background-color: $purple;
 	color: $green;
-	font-family: 'DIN Next W01 Medium', san-serif;
+	font-family: 'DIN Next W01 Medium', sans-serif;
 	font-size: 24px;
-	text-transform: uppercase;
+	text-transform: none;
 	letter-spacing: 3px;
-	line-height: 32px;
+	line-height: 24px;
 	margin: 0 0 20px 0;
 	padding: 11px 22px;
+	box-shadow: 3px 3px 0px rgba(246,16,103,.3);
 }
 .pseudo-code {
 	font-size: 18px;
@@ -110,38 +133,13 @@ h2 {
 	padding-top: 15px;
 	padding-bottom: 0;
 	line-height: 32px;
+	//text-shadow: 1px 2px rgba(246,16,103,.2);
 }
 h3 {
 	font-size: 18px;
 	font-family: 'DIN Next W01 Medium', sans-serif;
 	color: #444;
 }
-.spin {
- 	-webkit-animation: spin 1500ms infinite linear;
-    animation: spin 1500ms infinite linear;
-    display: inline-block;
-}
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(359deg);
-        transform: rotate(359deg);
-    }
-}
-@keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(359deg);
-        transform: rotate(359deg);
-    }
-}
-
 
 
 /* LINKS & BUTTONS */
@@ -159,11 +157,11 @@ a {
 }
 
 a.text-link {
-	padding-bottom: 2px;
+	padding-bottom: 0;
 	border-bottom: 0px solid transparent;
 
 	&:hover, &:focus {
-		border-bottom: 3px solid $purple;
+		border-bottom: 2px solid $purple;
 		-webkit-transition: all 0.3s;
 		-moz-transition: all 0.3s;
 		transition: all 0.3s;
@@ -172,7 +170,7 @@ a.text-link {
 
 footer a.text-link {
 	&:hover, &:focus {
-		border-bottom: 3px solid $green;
+		border-bottom: 2px solid $green;
 	}
 }
 
@@ -188,7 +186,7 @@ small a {
 	width: 0px !important;
 }
 a.btn, .wpcf7-submit {
-	background-color: $green;
+	background-color: $greenblue;
 	border: 0 !important;
 	color: $purple;
 	font-size: 20px;
@@ -204,15 +202,18 @@ a.btn, .wpcf7-submit {
 	box-shadow: 0px 6px $purple;
 
 	&:hover {
-		background-color: darken($green,5%);
-		color: darken($purple,5%);
+		background-color: darken($greenblue,5%);
+		color: $dark-purple;
 		top: 2px;
-		box-shadow: 0px 4px $purple;
+		box-shadow: 0px 4px $dark-purple;
 		
+		.icon {
+			color: $dark-purple;
+		}
 	}
 
 	&:active {
-		box-shadow: 0 0 #ab3c3c;
+		box-shadow: 0 0 $dark-purple;
 		top: 6px;
 		-webkit-transition: all 0.3s;
 		-moz-transition: all 0.3s;
@@ -280,11 +281,15 @@ article .col {
 .card {
 	padding: 20px 30px;
 	background-color: $light-beige;
-	box-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+	box-shadow: 3px 3px 0px rgba(246,16,103,.3);
 	display: block;
+	border: 2px solid $purple;
 	p.cta { // actions/buttons
 		min-height: 80px;
 	}
+}
+header .col {
+	margin: 0 auto;
 }
 #work .flex-grid.half .col {
 	flex: 1;
@@ -299,7 +304,12 @@ article .col {
 
 /* NAV  */
 
+#home nav {
+	background: $green;
+}
+
 nav {
+	background: linear-gradient(#00feb4,#30fffc);
 	background-color: $green;
 	height: 50px;
 	position: fixed;
@@ -307,11 +317,19 @@ nav {
 	left: 0;
 	z-index: 23;
 	width: 100%;
-	box-shadow: 0px 4px 0px rgba(0,0,0,0.1);
+	//box-shadow: 0px 3px 0px rgba(246,16,103,.3);
+
+	.icon-arrow-left {
+		font-size: 24px;
+		float: left;
+		line-height: 45px;
+		padding-right: 10px;
+	}
 
 	a {
 		color: $purple;
 		weight: 600;
+		font-size: 16px;
 	}
 
 	ul {
@@ -343,12 +361,12 @@ nav {
 	}
 
 	.nav-heading {
-		padding: 5px 12px;
-		background-color: $purple;
-		color: $green;
-		font-family: 'PT Mono', monospace;
-		font-size: 18px;
-		text-transform: uppercase;
+		//padding: 5px 12px;
+		background-color: transparent;
+		color: $purple;
+		font-family: 'DIN Next W01 Bold', sans-serif;
+		font-size: 20px;
+		text-transform: none;
 		line-height: 50px;
 		letter-spacing: 2px;
 	}
@@ -362,7 +380,6 @@ nav {
 		float: right;
 	}
 }
-
 
 /* work section */
 
@@ -379,7 +396,7 @@ nav {
 	margin: 0 auto;
 	padding: 40px 0 0 0;
 	background-color: $purple;
-	box-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+	box-shadow: 3px 3px 0px rgba(246,16,103,.3);
 
 	.project-image-wrapper {
 		display: block;
@@ -394,14 +411,15 @@ nav {
 	    .toolbar {
 			background: repeating-linear-gradient(
 				-45deg,
-				#6e20bc,
-				#6e20bc 20px,
-				$purple 20px,
-				$purple 40px
+				darken($purple,5%),
+				darken($purple,5%) 20px,
+				darken($purple,10%) 20px,
+				darken($purple,10%) 40px
 			);
 
 			.toolbar-title {
 				opacity: 0.75;
+				color: $beige;
 			}
 
 			.square.next, .square.prev {
@@ -458,7 +476,7 @@ nav {
 	}
 
 	.square {
-		background-color: $green;
+		background-color: $greenblue;
 		border-left: 2px solid $purple;
 		border-top: 2px solid $purple;
 		border-bottom: 2px solid $purple;
@@ -471,7 +489,8 @@ nav {
 
 	    &:hover {
 			cursor: pointer;
-			background-color: darken($green,10%);
+			background-color: darken($greenblue,10%);
+			color: $dark-purple;
 		}
 
 		&.minimize { // last button
@@ -582,7 +601,7 @@ footer {
 		box-sizing: border-box;
 		font-family: 'DIN Next W01 Regular', sans-serif;
 		font-size: 18px;
-		background-color: rgba(123,36,210, 0.2);
+		background-color: lighten($purple, 40%);
 
 		&:focus {
 			//border: 3px solid $green;
@@ -595,7 +614,7 @@ footer {
 		}
 
 		&.wpcf7-not-valid {
-			border: 3px solid #ef476f;
+			border: 3px solid $pink;
 		}
 	}
 
@@ -606,11 +625,12 @@ footer {
 		margin-right: 0 !important;
 		padding: 10px 30px !important;
 		font-size: 20px;
-		background-color: $green !important;
+		background-color: $greenblue !important;
 		font-family: 'DIN Next W01 Bold', sans-serif;
 
 		&:hover {
-			background-color: darken($green,5%) !important;
+			background-color: darken($greenblue,5%) !important;
+			color: $dark-purple;
 		}
 	}
 
@@ -625,7 +645,7 @@ footer {
 
 span.wpcf7-not-valid-tip {
 	font-size: 14px;
-	color: #ef476f;
+	color: $pink;
 	padding: 5px 10px;
 	font-family: 'DIN Next W01 Bold', sans-serif;
 }
@@ -644,7 +664,7 @@ span.wpcf7-not-valid-tip {
 
 .wpcf7-validation-errors,
 .wpcf7-mail-sent-ng {
-	color: #ef476f;
+	color: $pink;
 }
 
 .wpcf7-mail-sent-ok {
@@ -685,7 +705,7 @@ span.wpcf7-not-valid-tip {
 }
 
 strong {
-	font-family: 'DIN Next W01 Bold', san-serif !important;
+	font-family: 'DIN Next W01 Bold', sans-serif !important;
 }
 
 
@@ -702,11 +722,16 @@ strong {
 		font-size: 30px;
 	}
 
+	#posts {
+		background-color: $beige;
+	}
+
 	#posts .section-body .flex-grid { // main content
 		padding: 20px 30px;
 		background-color: #FFFCFA;
 		display: block;
-		box-shadow: 3px 3px 0 rgba(0,0,0,.1);
+		box-shadow: 3px 3px 0 rgba(246,16,103,.3);
+		border: 2px solid $purple;
 	}
 
 	p {
@@ -741,8 +766,7 @@ strong {
 		text-transform: uppercase;
 
 		&:nth-child(2){
-			font-size: 20px;
-			width: 50%;
+			font-size: 18px;
 		}
 	}
 	.section-heading {
@@ -811,18 +835,32 @@ strong {
 		margin: 10px 0;
 	}
 
-	.col.nav-left {
+	.col.nav-left .nav-heading {
 		display: none;
 		visibility: hidden;
 	}
 
+	.col.nav-right a {
+		font-size: 14px;
+	}
+
 	footer .align-right.sm-icons {
 		text-align: left;
+		margin-top: 10px;
 
 		a {
 			margin-left: 0;
 			margin-right: 8px;
 			font-size: 20px;
+		}
+	}
+
+	p, span, div, strong, em, a {
+		font-size: 16px;
+
+
+		&.text-link {
+			padding-bottom: 0;
 		}
 	}
 }

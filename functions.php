@@ -1,16 +1,14 @@
 <?php
 
-add_filter('wpcf7_form_action_url', 'wpcf7_custom_form_action_url');
+define("THEME_DIR", get_template_directory_uri());
 
-function wpcf7_custom_form_action_url($url) {
-    global $post;
-    $id_to_change = 7;
-    if($post->ID === $id_to_change)
-        return '/#thank-you';
-    else
-        return $url;
+remove_action('wp_head', 'wp_generator');
+     
+function enqueue_styles() {
+    wp_register_style( 'main-styles', THEME_DIR . '/main.min.css', array(), '1', 'all' );
+    wp_enqueue_style( 'main-styles' );  
 }
 
-
+add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
 
 ?>
