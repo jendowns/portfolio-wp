@@ -11,7 +11,7 @@ body#single-post
 			.col.nav-right
 				ul
 				li
-					a.text-link(href='/#posts') Thoughts
+					a.text-link(href='/#posts') Writing
 				li
 					a.text-link(href='/#work') Projects
 				li
@@ -21,10 +21,11 @@ body#single-post
 		.section-body
 			.flex-grid
 				.col.align-left
-					h2 <?php the_title(); ?>
-					span.date <?php echo get_the_date("F j, Y"); ?>
-					.post-content
-						<?php while (have_posts()) : the_post(); the_content(); endwhile; ?>
+					.card
+						h2 <?php the_title(); ?>
+						span.date <?php echo get_the_date("F j, Y"); ?>
+						.post-content
+							<?php while (have_posts()) : the_post(); the_content(); endwhile; ?>
 
 
 	footer
@@ -37,7 +38,7 @@ body#single-post
 							i.icon.icon-heart
 							|  in Austin, TX.
 						br
-						small Palette via 
+						small Palette inspired by 
 							a(href='http://www.vanschneider.com/colors/', target='_blank', class='text-link') ColorClaim
 							| .
 				.col.align-right.sm-icons

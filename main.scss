@@ -2,9 +2,10 @@
 Theme Name: Luna
 Author: Jen Downs
 Author URI: https://jendowns.com/
-Description: Child-theme of TwentySixteen.
-Version: 1.0
+Description: My portfolio site
+Version: 2.0
 */
+
 
 
 /* COLORS */
@@ -31,9 +32,9 @@ $faded-pink		: rgba(248,10,149, 0.3);
 $light-pink		: #fda2d7;
 
 header {
-	background: linear-gradient(#00feb4,#30fffc);
+	background: linear-gradient(#00feb4,#30f1ff);
 	background-color: $greenblue;
-	padding: 75px 20px 50px 20px;
+	padding: 75px 20px 75px 20px;
 }
 #posts, #contact {
 	padding: 60px 20px;
@@ -41,12 +42,16 @@ header {
 #posts {
 	background-color: $beige;
 }
+body#home #posts {
+	border-bottom: 2px dashed $faded-pink;
+}
 #contact{
 	background-color: $beige;
 }
 #work {
 	background-color: #ffe5d4;
 	padding: 60px 20px;
+	border-bottom: 2px dashed $faded-pink;
 }
 footer {
 	background-color: $dark-purple;
@@ -85,6 +90,7 @@ footer {
 	display: table;
 	font-family: 'DIN Next W01 Bold', sans-serif;
 	text-transform: uppercase;
+	text-align: center;
 	//box-shadow: 3px 3px 0px rgba(246,16,103,.3);
 }
 .site-heading {
@@ -93,7 +99,7 @@ footer {
 	font-family: 'DIN Next W01 Bold', sans-serif;
 	font-size: 50px;
 	letter-spacing: 5px;
-	line-height: 40px;
+	line-height: initial;
 	margin: 0 auto;	
 	//padding: 15px 30px;
 	padding: 0;
@@ -104,7 +110,7 @@ footer {
 	//padding: 5px 15px;
 	padding: 0;
 	text-transform: uppercase;
-	color: light($purple, 5%);
+	color: lighten($purple, 5%);
 	font-family: 'DIN Next W01 Medium', sans-serif;
 }
 .section-heading {
@@ -117,7 +123,7 @@ footer {
 	line-height: 24px;
 	margin: 0 0 20px 0;
 	padding: 11px 22px;
-	box-shadow: 3px 3px 0px rgba(246,16,103,.3);
+	box-shadow: 3px 3px 0px $faded-pink, -1px -1px 0 $greenblue;
 }
 .pseudo-code {
 	font-size: 18px;
@@ -139,6 +145,10 @@ h3 {
 	font-size: 18px;
 	font-family: 'DIN Next W01 Medium', sans-serif;
 	color: #444;
+}
+
+input, textarea {
+	-webkit-appearance: none !important;
 }
 
 
@@ -187,7 +197,9 @@ small a {
 }
 a.btn, .wpcf7-submit {
 	background-color: $greenblue;
-	border: 0 !important;
+	border: 2px solid $purple;
+	border-radius: 7px;
+	-webkit-border-radius: 7px;
 	color: $purple;
 	font-size: 20px;
 	float: right;
@@ -206,6 +218,7 @@ a.btn, .wpcf7-submit {
 		color: $dark-purple;
 		top: 2px;
 		box-shadow: 0px 4px $dark-purple;
+		border: 2px solid $dark-purple;
 		
 		.icon {
 			color: $dark-purple;
@@ -281,7 +294,7 @@ article .col {
 .card {
 	padding: 20px 30px;
 	background-color: $light-beige;
-	box-shadow: 3px 3px 0px rgba(246,16,103,.3);
+	box-shadow: 3px 3px 0px $faded-pink, -1px -1px 0 $greenblue;
 	display: block;
 	border: 2px solid $purple;
 	p.cta { // actions/buttons
@@ -311,6 +324,7 @@ header .col {
 nav {
 	background: linear-gradient(#00feb4,#30fffc);
 	background-color: $green;
+	//box-shadow: 0px 0px 2px rgba(246, 16, 103, 0.2), 0px 4px 8px rgba(246, 16, 103, 0.1);
 	height: 50px;
 	position: fixed;
 	top: 0;
@@ -396,7 +410,7 @@ nav {
 	margin: 0 auto;
 	padding: 40px 0 0 0;
 	background-color: $purple;
-	box-shadow: 3px 3px 0px rgba(246,16,103,.3);
+	box-shadow: 3px 3px 0px $faded-pink, -1px -1px 0 $greenblue;
 
 	.project-image-wrapper {
 		display: block;
@@ -593,6 +607,8 @@ footer {
 
 	input, textarea {
 		border: 2px solid $light-beige;
+		border-radius: 0;
+		-webkit-border-radius: 0;
 		width: 100%;
 		min-height: 40px;
 		display: block;
@@ -627,10 +643,13 @@ footer {
 		font-size: 20px;
 		background-color: $greenblue !important;
 		font-family: 'DIN Next W01 Bold', sans-serif;
+		border: 2px solid $purple;
+		-webkit-border-radius: 7px;
 
 		&:hover {
 			background-color: darken($greenblue,5%) !important;
 			color: $dark-purple;
+			border: 2px solid $dark-purple;
 		}
 	}
 
@@ -639,6 +658,8 @@ footer {
 		letter-spacing: 0.25px;
 		color: $dark-purple;
 		font-size: 14px;
+		padding: 0;
+		margin: 0;
 		font-family: 'DIN Next W01 Bold', sans-serif;
 	}
 }
@@ -713,7 +734,8 @@ strong {
 
 #single-post {
 	padding-top: 50px;
-
+	background-color: $beige;
+	
 	.post-content {
 		padding-top: 20px;
 	}
@@ -724,14 +746,6 @@ strong {
 
 	#posts {
 		background-color: $beige;
-	}
-
-	#posts .section-body .flex-grid { // main content
-		padding: 20px 30px;
-		background-color: #FFFCFA;
-		display: block;
-		box-shadow: 3px 3px 0 rgba(246,16,103,.3);
-		border: 2px solid $purple;
 	}
 
 	p {
@@ -747,16 +761,67 @@ strong {
 	margin-bottom: 10px;
 }
 
+#page-404 {
+	background-color: $beige;
+}
+
+#page-404 > div {
+  position: relative;
+  padding-top: 20px;
+
+  	img {
+  		border: 2px solid $purple;
+  		box-shadow: 2px 2px 0px $faded-pink, -1px -1px 0px $greenblue;
+  	}
+
+  	h2 {
+  		text-shadow: 3px 0px 0px $faded-pink, 2px -2px 0px $greenblue;
+  		font-size: 36px;
+  		padding-bottom: 15px;
+  	}
+
+	.message-404 {
+	  width: 60%;
+	  margin: 0 auto;
+	  padding: 10px;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+
+	  * {
+	  	margin: 0 auto;
+	  	text-align: center;
+	  }
+	}
+}
+
 
 /* MOBILE */
 
 @media (max-width: 600px) {
 	section {
-		padding: 30px 15px !important;
+		padding: 20px 10px !important;
 	}
 	.card {
-		padding: 20px;
+		padding: 10px;
 		margin: 0;
+	}
+	p.cta {
+		text-align: right;
+	}
+	.tinted-image {
+		margin: 0 auto;
+		height: 125px !important;
+		width: 125px !important;
+		border-radius: 125px !important;
+		background-size: 125px 125px !important;
+
+		&.pull-right {
+			float: right;
+		}
+	}
+	#contact input.wpcf7-submit, a.btn, .cta a.btn i {
+		font-size: 16px;
 	}
 	.site-heading {
 		font-size: 32px;
@@ -768,6 +833,12 @@ strong {
 		&:nth-child(2){
 			font-size: 18px;
 		}
+	}
+	form .wpcf7-form-control-wrap { // recaptcha
+		margin-left: -10px;
+	}
+	form label, form label span {
+		line-height: initial;
 	}
 	.section-heading {
 		font-size: 22px;
@@ -846,7 +917,7 @@ strong {
 
 	footer .align-right.sm-icons {
 		text-align: left;
-		margin-top: 10px;
+		padding-top: 10px;
 
 		a {
 			margin-left: 0;
