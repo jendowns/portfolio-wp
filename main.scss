@@ -40,18 +40,14 @@ header {
 	padding: 60px 20px;
 }
 #posts {
-	background-color: $beige;
-}
-body#home #posts {
-	border-bottom: 2px dashed $faded-pink;
+	background-color: $light-beige;
 }
 #contact{
-	background-color: $beige;
+	background-color: $light-beige;
 }
 #work {
-	background-color: #ffe5d4;
+	background-color: $beige;
 	padding: 60px 20px;
-	border-bottom: 2px dashed $faded-pink;
 }
 footer {
 	background-color: $dark-purple;
@@ -123,7 +119,7 @@ footer {
 	line-height: 24px;
 	margin: 0 0 20px 0;
 	padding: 11px 22px;
-	box-shadow: 3px 3px 0px $faded-pink, -1px -1px 0 $greenblue;
+	box-shadow: 3px 3px 0px $faded-pink, -2px -2px 0 $greenblue;
 }
 .pseudo-code {
 	font-size: 18px;
@@ -294,12 +290,15 @@ article .col {
 .card {
 	padding: 20px 30px;
 	background-color: $light-beige;
-	box-shadow: 3px 3px 0px $faded-pink, -1px -1px 0 $greenblue;
+	//box-shadow: 3px 3px 0px $faded-pink, -1px -1px 0 $greenblue;
 	display: block;
-	border: 2px solid $purple;
+	border: 1px solid $purple;
 	p.cta { // actions/buttons
 		min-height: 80px;
 	}
+}
+#work .card {
+	background-color: $beige;
 }
 header .col {
 	margin: 0 auto;
@@ -410,7 +409,7 @@ nav {
 	margin: 0 auto;
 	padding: 40px 0 0 0;
 	background-color: $purple;
-	box-shadow: 3px 3px 0px $faded-pink, -1px -1px 0 $greenblue;
+	//box-shadow: 3px 3px 0px $faded-pink, -1px -1px 0 $greenblue;
 
 	.project-image-wrapper {
 		display: block;
@@ -447,9 +446,9 @@ nav {
 	}
 
 	img {
-		border-left: 2px solid $purple;
-		border-right: 2px solid $purple;
-		border-bottom: 2px solid $purple;
+		border-left: 1px solid $purple;
+		border-right: 1px solid $purple;
+		border-bottom: 1px solid $purple;
 		border-top: 0;
 		max-width: 750px;
 		width: 100%;
@@ -491,9 +490,9 @@ nav {
 
 	.square {
 		background-color: $greenblue;
-		border-left: 2px solid $purple;
-		border-top: 2px solid $purple;
-		border-bottom: 2px solid $purple;
+		border-left: 1px solid $purple;
+		border-top: 1px solid $purple;
+		border-bottom: 1px solid $purple;
 		border-right: none;
 	    width: 40px;
 	    height: 100%;
@@ -508,7 +507,7 @@ nav {
 		}
 
 		&.minimize { // last button
-			border-right: 2px solid $purple;
+			border-right: 1px solid $purple;
 		}
 	}
 
@@ -630,7 +629,7 @@ footer {
 		}
 
 		&.wpcf7-not-valid {
-			border: 3px solid $pink;
+			border: 2px solid $pink;
 		}
 	}
 
@@ -828,7 +827,6 @@ strong {
 		letter-spacing: 5px;
 		line-height: 32px;
 		padding: 17px 22px;
-		text-transform: uppercase;
 
 		&:nth-child(2){
 			font-size: 18px;
