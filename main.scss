@@ -112,14 +112,14 @@ footer {
 .section-heading {
 	background-color: $purple;
 	color: $green;
-	font-family: 'DIN Next W01 Medium', sans-serif;
+	font-family: 'DIN Next W01 Regular', sans-serif;
 	font-size: 24px;
-	text-transform: none;
-	letter-spacing: 3px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 	line-height: 24px;
-	margin: 0 0 20px 0;
-	padding: 11px 22px;
-	box-shadow: 3px 3px 0px $faded-pink, -2px -2px 0 $greenblue;
+	margin: 0 0 30px 0;
+	padding: 12px 28px;
+	box-shadow: 6px 6px 0 $faded-pink,-6px -6px 0 rgba(0, 252, 248,0.5);
 }
 .pseudo-code {
 	font-size: 18px;
@@ -247,20 +247,35 @@ small {
 	-webkit-transform: scaleX(-1);
 	-ms-transform: scaleX(-1);
 }
+p.meta {
+	//margin-top: 8px;
+}
 span.date {
 	font-size: 14px;
 	font-family: 'DIN Next W01 Regular', sans-serif;
 	text-transform: uppercase;
 	color: #666;
 
-	& + p {
-		margin-top: 8px;
-	}
-
 	&:before {
 		content: "\e836";
 		font-family: "icomoon";
 		padding-right: 7px;
+	}
+}
+
+p.meta a.text-link {
+	font-size: 14px;
+	font-family: 'DIN Next W01 Regular', sans-serif;
+	text-transform: uppercase;
+	color: #666;
+	margin-right: 20px;
+	color: $purple;
+
+	&:before {
+		content: "\e833";
+		font-family: "icomoon";
+		padding-right: 7px;
+		color: $dark-purple;
 	}
 }
 
@@ -452,21 +467,8 @@ nav {
 		border-top: 0;
 		max-width: 750px;
 		width: 100%;
-		position: absolute;
-		left: 0;
-		top: 0;
-		opacity: 0;
-
-		&:first-child {
-			position: relative;
-		}
-
-		&.faded-in {
-			opacity: 1;
-			transition: opacity .5s ease-out;
-		   -moz-transition: opacity .5s ease-out;
-		   -webkit-transition: opacity .5s ease-out;
-		}
+		position: relative;
+		min-height: 100px;
 	}
 }
 
@@ -733,23 +735,53 @@ strong {
 
 #single-post {
 	padding-top: 50px;
-	background-color: $beige;
+	background-color: $light-beige;
 	
 	.post-content {
 		padding-top: 20px;
 	}
 
-	h2 {
+	h1 {
 		font-size: 30px;
+		color: $dark-purple;
+		font-family: 'DIN Next W01 Bold', sans-serif;
+	}
+
+	h2 {
+		font-size: 24px;
+		margin-bottom: 10px;
+		color: $dark-purple;
+		font-family: 'DIN Next W01 Bold', sans-serif;
+	}
+
+	ol li {
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	pre {
+		background-color: $faded-pink;
+		padding: 10px;
+		border-radius: 3px;
+		font-size: 14px;
+		margin: 0;
 	}
 
 	#posts {
-		background-color: $beige;
+		background-color: $light-beige;
+		padding: 30px 20px 60px 20px;
 	}
 
 	p {
-		padding-bottom: 20px;
+		padding-bottom: 0;
 		line-height: default;
+		margin: 10px 0;
+	}
+
+	img {
+		width: 100%;
 	}
 }
 

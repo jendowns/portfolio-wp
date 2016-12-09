@@ -13,7 +13,8 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'main.css': 'main.scss'
+          'main.css': 'main.scss',
+          'andyet.css': 'andyet.scss'
         }
       }
     },
@@ -24,7 +25,8 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'main.min.css': [ 'an.css', 'reset.css', 'icomoon.css', 'main.css']
+          'main-styles.min.css': [ 'an.css', 'reset.css', 'icomoon.css', 'main.css'],
+          'andyet.min.css': [ 'andyet.css']
         }
       }
     },
@@ -40,7 +42,9 @@ module.exports = function (grunt) {
           'content-home.php': ['content-home.pug'],
           'single.php': ['single.pug'],
           'header.php': ['header.pug'],
-          'footer.php': ['footer.pug']
+          'footer.php': ['footer.pug'],
+          '404.php': ['404.pug'],
+          'page-andyet.php': ['page-andyet.pug']
         }
       }
     }

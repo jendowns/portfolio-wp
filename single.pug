@@ -22,7 +22,7 @@ body#single-post
 			.flex-grid
 				.col.align-left
 					.card
-						h2 <?php the_title(); ?>
+						h1 <?php the_title(); ?>
 						span.date <?php echo get_the_date("F j, Y"); ?>
 						.post-content
 							<?php while (have_posts()) : the_post(); the_content(); endwhile; ?>
