@@ -25,7 +25,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'main-styles.min.css': [ 'an.css', 'reset.css', 'icomoon.css', 'main.css'],
+          'main-styles.min.css': [ 'reset.css', 'an.css', 'icomoon.css', 'main.css'],
           'andyet.min.css': [ 'andyet.css']
         }
       }

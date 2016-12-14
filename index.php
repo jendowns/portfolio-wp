@@ -1,3 +1,3 @@
-<?php include 'content-header.php';?>
+<?php get_header(); ?>
 
 <?php include 'content-home.php';?>

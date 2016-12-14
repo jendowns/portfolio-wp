@@ -7,29 +7,31 @@ Version: 2.0
 */
 
 
-
 /* COLORS */
 
-$green 			: #00FEC9; // turquoise-green
-//$light-green	: #d7fdf0; // light cyan
-$light-green	: #D1FFF5;
+$green 			: rgb(0, 254, 201); 
+$light-green	: rgb(209, 255, 245);
 
-//$purple		: #7B24D2; // blue-violet
-//$purple 		: #8641FF;
-//$purple 		: #7629FF;
-$purple 		: #760BFF;
-//$dark-purple	: #440381; // dark indigo
-//$dark-purple	: #34008f;
-$dark-purple	: #5207b5;
+$purple 		: rgb(118, 11, 255);
+$dark-purple	: rgb(82, 7, 181);
 
-$beige			: #FFEFE4; // linen
-$light-beige	: #FFFCFA; // snow
+$beige			: rgb(255, 239, 228);
+$light-beige	: rgb(255, 252, 250);
 
-$greenblue		: #00fcf8;
+$greenblue		: rgb(0, 252, 248);
 
-$pink			: #f80a95;
+$pink			: rgb(248, 10, 149);
 $faded-pink		: rgba(248,10,149, 0.3);
-$light-pink		: #fda2d7;
+$light-pink		: rgb(253, 162, 215);
+
+
+/* FONTS */
+
+$font-regular:	'DIN Next W01 Regular', Verdana, sans-serif;
+$font-bold:		'DIN Next W01 Bold', Verdana, sans-serif;
+$font-medium:	'DIN Next W01 Medium', Verdana, sans-serif;
+
+
 
 header {
 	background: linear-gradient(#00feb4,#30f1ff);
@@ -63,7 +65,7 @@ footer {
 p, span, div, strong, em {
 	color: #222;
 	font-size: 18px;
-	font-family: 'DIN Next W01 Regular', sans-serif;
+	font-family: $font-regular;
 	line-height: 1.33;
 }
 
@@ -84,15 +86,14 @@ footer {
 
 .site-heading, .section-heading {
 	display: table;
-	font-family: 'DIN Next W01 Bold', sans-serif;
+	font-family: $font-bold;
 	text-transform: uppercase;
 	text-align: center;
-	//box-shadow: 3px 3px 0px rgba(246,16,103,.3);
 }
 .site-heading {
 	background-color: transparet;
 	color: $purple;
-	font-family: 'DIN Next W01 Bold', sans-serif;
+	font-family: $font-bold;
 	font-size: 50px;
 	letter-spacing: 5px;
 	line-height: initial;
@@ -107,12 +108,12 @@ footer {
 	padding: 0;
 	text-transform: uppercase;
 	color: lighten($purple, 5%);
-	font-family: 'DIN Next W01 Medium', sans-serif;
+	font-family: $font-medium;
 }
 .section-heading {
 	background-color: $purple;
 	color: $green;
-	font-family: 'DIN Next W01 Regular', sans-serif;
+	font-family: $font-regular;
 	font-size: 24px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -124,13 +125,13 @@ footer {
 .pseudo-code {
 	font-size: 18px;
 	color: #222;
-	font-family: 'DIN Next W01 Regular', sans-serif;
+	font-family: $font-regular;
 
 	a { font-size: 18px; }
 }
 h2 {
 	font-size: 25px;
-	font-family: 'DIN Next W01 Bold', sans-serif;
+	font-family: $font-bold;
 	color: $dark-purple;
 	padding-top: 15px;
 	padding-bottom: 0;
@@ -139,7 +140,7 @@ h2 {
 }
 h3 {
 	font-size: 18px;
-	font-family: 'DIN Next W01 Medium', sans-serif;
+	font-family: $font-medium;
 	color: #444;
 }
 
@@ -153,7 +154,7 @@ input, textarea {
 a {
 	background-color: transparent;
 	color: $purple;
-	font-family: 'DIN Next W01 Bold', sans-serif;
+	font-family: $font-bold;
 	font-size: 18px;
 	text-decoration: none;
 
@@ -184,7 +185,9 @@ small a {
 	font-size: 13px;
 	color: $green;
 
-	&:hover { color: darken($green,5%); }
+	&:hover { 
+		color: darken($green,5%);
+	}
 }
 .screen-reader-response {
 	visibility: hidden !important;
@@ -199,7 +202,7 @@ a.btn, .wpcf7-submit {
 	color: $purple;
 	font-size: 20px;
 	float: right;
-	font-family: 'DIN Next W01 Bold', sans-serif;
+	font-family: $font-bold;
 	text-transform: uppercase;
 	text-decoration: none;
 	cursor: pointer;
@@ -238,7 +241,7 @@ small {
 	font-size: 14px;
 	line-height: 14px;
 	color: $light-beige;
-	font-family: 'DIN Next W01 Regular', sans-serif;
+	font-family: $font-regular;
 }
 
 .icon-maximize, .icon-minimize {
@@ -247,33 +250,30 @@ small {
 	-webkit-transform: scaleX(-1);
 	-ms-transform: scaleX(-1);
 }
-p.meta {
-	//margin-top: 8px;
-}
 span.date {
 	font-size: 14px;
-	font-family: 'DIN Next W01 Regular', sans-serif;
+	font-family: $font-regular;
 	text-transform: uppercase;
 	color: #666;
 
 	&:before {
-		content: "\e836";
-		font-family: "icomoon";
+		content: '\e836';
+		font-family: 'icomoon';
 		padding-right: 7px;
 	}
 }
 
 p.meta a.text-link {
 	font-size: 14px;
-	font-family: 'DIN Next W01 Regular', sans-serif;
+	font-family: $font-regular;
 	text-transform: uppercase;
 	color: #666;
 	margin-right: 20px;
 	color: $purple;
 
 	&:before {
-		content: "\e833";
-		font-family: "icomoon";
+		content: '\e833';
+		font-family: 'icomoon';
 		padding-right: 7px;
 		color: $dark-purple;
 	}
@@ -305,10 +305,9 @@ article .col {
 .card {
 	padding: 20px 30px;
 	background-color: $light-beige;
-	//box-shadow: 3px 3px 0px $faded-pink, -1px -1px 0 $greenblue;
 	display: block;
 	border: 1px solid $purple;
-	p.cta { // actions/buttons
+	p.cta { 
 		min-height: 80px;
 	}
 }
@@ -338,14 +337,12 @@ header .col {
 nav {
 	background: linear-gradient(#00feb4,#30fffc);
 	background-color: $green;
-	//box-shadow: 0px 0px 2px rgba(246, 16, 103, 0.2), 0px 4px 8px rgba(246, 16, 103, 0.1);
 	height: 50px;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 23;
 	width: 100%;
-	//box-shadow: 0px 3px 0px rgba(246,16,103,.3);
 
 	.icon-arrow-left {
 		font-size: 24px;
@@ -389,10 +386,9 @@ nav {
 	}
 
 	.nav-heading {
-		//padding: 5px 12px;
 		background-color: transparent;
 		color: $purple;
-		font-family: 'DIN Next W01 Bold', sans-serif;
+		font-family: $font-bold;
 		font-size: 20px;
 		text-transform: none;
 		line-height: 50px;
@@ -482,7 +478,7 @@ nav {
 	.toolbar-title {
 		font-size: 14px;
 		line-height: 40px;
-		font-family: 'DIN Next W01 Regular', sans-serif;
+		font-family: $font-regular;
 		color: $light-beige;
 		float: left;
 		margin-left: 20px;
@@ -542,7 +538,6 @@ footer {
 
 		&:hover {
 			color: darken($green,10%);
-			//border-bottom: 3px solid $green;
 			-webkit-transition: all 0.3s;
 			-moz-transition: all 0.3s;
 			transition: all 0.3s;
@@ -567,8 +562,6 @@ footer {
 	}
 }
 
-/* ------------------------------------------------------ */
-/* ------------------------------------------------------ */
 /* ------------------------------------------------------ */
 
 #posts {
@@ -616,7 +609,7 @@ footer {
 		margin: 0;
 		padding: 5px;
 		box-sizing: border-box;
-		font-family: 'DIN Next W01 Regular', sans-serif;
+		font-family: $font-regular;
 		font-size: 18px;
 		background-color: lighten($purple, 40%);
 
@@ -643,7 +636,7 @@ footer {
 		padding: 10px 30px !important;
 		font-size: 20px;
 		background-color: $greenblue !important;
-		font-family: 'DIN Next W01 Bold', sans-serif;
+		font-family: $font-bold;
 		border: 2px solid $purple;
 		-webkit-border-radius: 7px;
 
@@ -661,7 +654,7 @@ footer {
 		font-size: 14px;
 		padding: 0;
 		margin: 0;
-		font-family: 'DIN Next W01 Bold', sans-serif;
+		font-family: $font-bold;
 	}
 }
 
@@ -669,7 +662,7 @@ span.wpcf7-not-valid-tip {
 	font-size: 14px;
 	color: $pink;
 	padding: 5px 10px;
-	font-family: 'DIN Next W01 Bold', sans-serif;
+	font-family: $font-bold;
 }
 .wpcf7-response-output {
 	font-size: 18px;
@@ -677,7 +670,7 @@ span.wpcf7-not-valid-tip {
 	padding: 0 !important;
 	margin: 0 !important;
 	border: none !important;
-	font-family: 'DIN Next W01 Bold', sans-serif;
+	font-family: $font-bold;
 }
 	
 .wpcf7-display-none {
@@ -727,7 +720,8 @@ span.wpcf7-not-valid-tip {
 }
 
 strong {
-	font-family: 'DIN Next W01 Bold', sans-serif !important;
+	font-family: $font-bold !important;
+	font-weight: normal;
 }
 
 
@@ -744,14 +738,14 @@ strong {
 	h1 {
 		font-size: 30px;
 		color: $dark-purple;
-		font-family: 'DIN Next W01 Bold', sans-serif;
+		font-family: $font-bold;
 	}
 
 	h2 {
 		font-size: 24px;
 		margin-bottom: 10px;
 		color: $dark-purple;
-		font-family: 'DIN Next W01 Bold', sans-serif;
+		font-family: $font-bold;
 	}
 
 	ol li {
