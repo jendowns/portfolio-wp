@@ -33,7 +33,7 @@ $section-padding: 60px 20px;
 
 
 header {
-	background: linear-gradient(#00feb4,#30f1ff);
+	background: linear-gradient(#30ffa6,#30f1ff);
 	background-color: $greenblue;
 	padding: $section-padding;
 }
@@ -185,7 +185,7 @@ small a {
 }
 a.btn, .wpcf7-submit {
 	background-color: $greenblue;
-	border: 2px solid $purple;
+	border: none;
 	color: $purple;
 	font-size: 20px;
 	float: right;
@@ -204,7 +204,6 @@ a.btn, .wpcf7-submit {
 		color: $dark-purple;
 		top: 2px;
 		box-shadow: 0px 4px $dark-purple;
-		border: 2px solid $dark-purple;
 		
 		.icon {
 			color: $dark-purple;
@@ -622,12 +621,12 @@ footer {
 		font-size: 20px;
 		background-color: $greenblue !important;
 		font-family: $font-bold;
-		border: 2px solid $purple;
+		border: none;
 
 		&:hover {
 			background-color: darken($greenblue,5%) !important;
 			color: $dark-purple;
-			border: 2px solid $dark-purple;
+			border: none;
 		}
 	}
 
