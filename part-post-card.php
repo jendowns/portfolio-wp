@@ -20,7 +20,7 @@
         echo "<div class='flex-grid'>";
         echo "<div class='col'>";
         echo "<div class='card'>";
-        echo "<a href='$subpost_link'>";
+        echo "<a href='" . $subpost_link . "'>";
         echo "<h2>" . $subpost_title . "</h2>";
         echo "</a>";
         echo "<span class='date'>" . $formatted_date . "</span>";

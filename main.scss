@@ -7,8 +7,6 @@ Version: 2.0
 */
 
 
-/* COLORS */
-
 $green 			: rgb(0, 254, 201); 
 $light-green	: rgb(209, 255, 245);
 $purple 		: rgb(118, 11, 255);
@@ -20,8 +18,7 @@ $pink			: rgb(248, 10, 149);
 $faded-pink		: rgba(248,10,149, 0.3);
 $light-pink		: rgb(253, 162, 215);
 
-
-/* FONTS */
+$border 		:  1px solid $purple;
 
 $font-regular:	'DIN Next W01 Regular', Verdana, sans-serif;
 $font-bold:		'DIN Next W01 Bold', Verdana, sans-serif;
@@ -292,7 +289,7 @@ article .col {
 	padding: 20px 30px;
 	background-color: $light-beige;
 	display: block;
-	border: 1px solid $purple;
+	border: $border;
 	p.cta { 
 		min-height: 80px;
 	}
@@ -442,9 +439,9 @@ nav {
 	}
 
 	img {
-		border-left: 1px solid $purple;
-		border-right: 1px solid $purple;
-		border-bottom: 1px solid $purple;
+		border-left: $border;
+		border-right: $border;
+		border-bottom: $border;
 		border-top: 0;
 		max-width: 750px;
 		width: 100%;
@@ -473,9 +470,9 @@ nav {
 
 	.square {
 		background-color: $greenblue;
-		border-left: 1px solid $purple;
-		border-top: 1px solid $purple;
-		border-bottom: 1px solid $purple;
+		border-left: $border;
+		border-top: $border;
+		border-bottom: $border;
 		border-right: none;
 	    width: 40px;
 	    height: 100%;
@@ -490,7 +487,7 @@ nav {
 		}
 
 		&.minimize { // last button
-			border-right: 1px solid $purple;
+			border-right: $border;
 		}
 	}
 
@@ -715,7 +712,9 @@ strong {
 	background-color: $light-beige;
 	
 	.post-content {
-		padding-top: 20px;
+		padding-top: 10px;
+	    margin-top: 10px;
+	    border-top: $border;
 	}
 
 	h1 {
