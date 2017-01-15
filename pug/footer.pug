@@ -1,3 +1,5 @@
+
+<?php if(!is_404()){ ?>
 footer
 	.container
 		.flex-grid
@@ -22,7 +24,7 @@ footer
 					a(href='https://www.github.com/jendowns', target='_blank', title='GitHub')
 						i.icon.icon-github(aria-hidden="true") 
 						span.screen-reader GitHub
-
+<?php } ?>
 script(type='text/javascript').
 	console.log("( ^ o ^ )/");
 

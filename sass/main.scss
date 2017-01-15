@@ -1,9 +1,9 @@
 /*
-Theme Name: Luna
+Theme Name: Purple
 Author: Jen Downs
 Author URI: https://jendowns.com/
 Description: My portfolio site
-Version: 2.1
+Version: 1.0.0
 */
 
 @import 'reset.scss';
@@ -13,7 +13,7 @@ Version: 2.1
 
 
 /* -------------------------
-		1. Generic Styles
+	Generic Styles
 ----------------------------*/
 
 *,
@@ -27,6 +27,10 @@ html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 	font-size: 10px; // baseline
+}
+
+body {
+	background-color: #fff;
 }
 
 body, section, div, p, li, a, span {
@@ -85,24 +89,12 @@ a {
 	text-decoration: none;
 	font-size: inherit;
 	line-height: inherit;
+	@include transition(all, 200ms);
 
 	&:hover, &:focus {
 		color: darken($purple, 10%);
 		text-decoration: none;
 		border-bottom: 2px solid darken($purple, 10%);
-	}
-
-	&:not(.button):hover,
-	&:not(.button):focus {
-		padding-bottom: 1px;
-	}
-}
-
-a {
-	@include transition(all, 200ms);
-
-	&:hover {
-		cursor: pointer;
 	}
 }
 
@@ -123,7 +115,7 @@ em {
 
 
 /* -------------------------
-		2. Utility Classes
+	Utility Classes
 ----------------------------*/
 
 .screen-reader {
@@ -409,7 +401,7 @@ footer {
 			@include calc-font-flow(20);
 		}
 
-		a:focus, a:active, a:hover {
+		a:hover, a:focus {
 			color: darken($purple, 30%);
 			text-decoration: none;
 		}
@@ -545,7 +537,7 @@ footer {
 		display: block;
 	}
 
-	.project__window, .project__info {
+	.project__window, .project__info, footer ul {
 		width: 98%;
 	}
 
@@ -556,6 +548,11 @@ footer {
 			@include calc-font-flow(14);
 		}
 	}
+
+	footer ul:last-child {
+		text-align: left;
+	}
+
 }
 
 

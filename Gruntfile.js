@@ -24,18 +24,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'style.nomin.css': 'style.noprefix.css'
-        }
-      }
-    },
-    cssmin: {
-      options: {
-        shorthandCompacting: false,
-        roundingPrecision: -1
-      },
-      dist: {
-        files: {
-          'style.css': [ 'style.nomin.css']
+          'style.css': 'style.noprefix.css'
         }
       }
     },
@@ -60,8 +49,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-pug');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
    
-  grunt.registerTask('default', ['sass','postcss','cssmin','pug']);
+  grunt.registerTask('default', ['sass','postcss','pug']);
 
 };
