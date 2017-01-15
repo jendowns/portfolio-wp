@@ -1,53 +1,22 @@
 <?php get_header(); ?>
 
-<body <?php body_class(); ?>>
+	<body <?php body_class(); ?>>
 
-
-	nav
-		.flex-grid
-			ul
-				li 
-					a(href='/', title='Back Home')
-						i.icon.icon-arrow-left(aria-hidden="true") 
-						|  Back
-
-	section
-		.container
-			p.date Posted on <?php echo get_the_date("F j, Y"); ?>
-			h1 <?php the_title(); ?>
-			<?php while (have_posts()) : the_post(); the_content(); endwhile; ?>
-
-
-	footer
-		.section-body
+		nav
 			.flex-grid
 				ul
-					li
-						small &copy; 2017 Jen Downs. 
-					li
-						small Made with 
-							i.icon.icon-heart
-							span.screen-reader love 
-							|  in Austin, TX.
-				ul
-					li
-						a(href='https://www.twitter.com/jenisora', target='_blank', title='Twitter')
-							i.icon.icon-twitter(aria-hidden="true") 
-							span.screen-reader Twitter
-					li    
-						a(href='https://www.codepen.io/jendowns', target='_blank', title='Codepen')
-							i.icon.icon-codepen(aria-hidden="true") 
-							span.screen-reader Codepen
-					li    
-						a(href='https://www.github.com/jendowns', target='_blank', title='GitHub')
-							i.icon.icon-github(aria-hidden="true") 
-							span.screen-reader GitHub
+					li 
+						a(href='/', title='Back Home')
+							i.icon.icon-arrow-left(aria-hidden="true") 
+							|  Back
 
-	script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', type='text/javascript')
-	script(src='/wp-content/themes/portfolio/js/util.js' type='text/javascript')
-	script(src='/wp-content/themes/portfolio/js/home.js' type='text/javascript')
+		section
+			.container
+				p.date Posted on <?php echo get_the_date("F j, Y"); ?>
+				h1 <?php the_title(); ?>
+				<?php while (have_posts()) : the_post(); the_content(); endwhile; ?>
 
 
-	<?php get_footer(); ?> 
+		<?php get_footer(); ?> 
 
 
