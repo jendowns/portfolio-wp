@@ -292,6 +292,7 @@ article {
 	img {
 		width: 100%;
 		height: auto;
+		flex-shrink: 0; // for IE :)
 	}
 }
 .window__toolbar {

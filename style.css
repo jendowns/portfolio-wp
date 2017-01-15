@@ -377,7 +377,10 @@ article {
   border: 1px solid #d1d1d1; }
   .window__wrapper img {
     width: 100%;
-    height: auto; }
+    height: auto;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0; }
 
 .window__toolbar {
   height: 36px;
