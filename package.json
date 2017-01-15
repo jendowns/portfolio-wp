@@ -1,26 +1,21 @@
 {
   "name": "jendowns",
-  "description": "Files for My Portfolio",
+  "description": "Portfolio",
   "version": "2.0.0",
   "main": "index",
   "devDependencies": {
+    "autoprefixer": "^6.6.1",
     "grunt": "^1.0.1",
-    "grunt-contrib-clean": "~0.6.0",
-    "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-cssmin": "^0.12.3",
     "grunt-contrib-pug": "^1.0.0",
-    "grunt-sass": "^1.2.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
     "load-grunt-tasks": "^3.5.2",
     "pug": "^2.0.0-beta6"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jendowns/personal-site.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jendowns/personal-site/issues"
-  },
-  "homepage": "https://github.com/jendowns/personal-site#readme"
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "iOS >= 7"
+  ]
 }

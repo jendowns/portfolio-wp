@@ -5,14 +5,11 @@ define("THEME_DIR", get_template_directory_uri());
 remove_action('wp_head', 'wp_generator');
      
 function enqueue_styles() {
-    wp_register_style( 'main-styles', THEME_DIR . '/main-styles.min.css', array(), '1', 'all' );
-    wp_enqueue_style( 'main-styles' );  
+    wp_register_style( 'style', THEME_DIR . '/style.css' );
+    wp_enqueue_style( 'style' );  
 
-    $thing = is_page('andyet');
-    if($thing){
-    	wp_register_style( 'andyet-styles', THEME_DIR . '/andyet.min.css', array(), '1', 'all' );
-    	wp_enqueue_style( 'andyet-styles' );  
-    }
+	wp_register_style( 'lato-font', 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900' );
+	wp_enqueue_style( 'lato-font' );  
 }
 
 function register_jquery() {

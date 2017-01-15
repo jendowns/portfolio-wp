@@ -9,12 +9,22 @@ module.exports = function (grunt) {
     
     sass: {
       options: {
-        sourceMap: true
+        sourcemap: 'none'
       },
       dist: {
         files: {
-          'main.css': 'main.scss',
-          'andyet.css': 'andyet.scss'
+          'style.noprefix.css': 'sass/main.scss'
+        }
+      }
+    },
+    postcss: {
+      options: {
+        processors: [require('autoprefixer')],
+        map: false
+      },
+      dist: {
+        files: {
+          'style.nomin.css': 'style.noprefix.css'
         }
       }
     },
@@ -25,8 +35,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'main-styles.min.css': [ 'reset.css', 'an.css', 'icomoon.css', 'main.css'],
-          'andyet.min.css': [ 'andyet.css']
+          'style.css': [ 'style.nomin.css']
         }
       }
     },
@@ -38,22 +47,22 @@ module.exports = function (grunt) {
           }
         },
         files: {
-          'content-header.php': ['content-header.pug'],
-          'content-home.php': ['content-home.pug'],
-          'single.php': ['single.pug'],
-          'header.php': ['header.pug'],
-          'footer.php': ['footer.pug'],
-          '404.php': ['404.pug'],
-          'page-andyet.php': ['page-andyet.pug']
+          'content-header.php': ['pug/content-header.pug'],
+          'content-home.php': ['pug/content-home.pug'],
+          'single.php': ['pug/single.pug'],
+          'header.php': ['pug/header.pug'],
+          'footer.php': ['pug/footer.pug'],
+          '404.php': ['pug/404.pug']
         }
       }
     }
   });
 
-  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-pug');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
    
-  grunt.registerTask('default', ['sass','cssmin','pug']);
+  grunt.registerTask('default', ['sass','postcss','cssmin','pug']);
 
 };
