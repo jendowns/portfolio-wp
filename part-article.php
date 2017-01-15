@@ -17,22 +17,16 @@
         $formatted_date = date('F j, Y', strtotime($subpost_date));
 
         echo "<article>";
-        echo "<div class='flex-grid'>";
-        echo "<div class='col'>";
-        echo "<div class='card'>";
         echo "<a href='" . $subpost_link . "'>";
-        echo "<h2>" . $subpost_title . "</h2>";
+        echo "<h3>" . $subpost_title . "</h3>";
         echo "</a>";
         echo "<span class='date'>" . $formatted_date . "</span>";
-        echo "<p>" . $subpost_preview . "</h2>";
-        echo "<p class='cta'>";
-        echo "<a class='btn' href='" . $subpost_link . "'>";
+        echo "<p>" . $subpost_preview . "</p>";
+        echo "<p>";
+        echo "<a href='" . $subpost_link . "'>";
         echo "Read More";
         echo "</a>";
         echo "</p>";
-        echo "</div>";
-        echo "</div>";
-        echo "</div>";
         echo "</article>";
     }
     wp_reset_query();
