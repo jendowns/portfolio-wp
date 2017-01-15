@@ -84,6 +84,7 @@ a {
 	font-family: $font--body;
 	text-decoration: none;
 	font-size: inherit;
+	line-height: inherit;
 
 	&:hover, &:focus {
 		color: darken($purple, 10%);
