@@ -1,5 +1,5 @@
 footer
-	.section-body
+	.container
 		.flex-grid
 			ul
 				li
@@ -23,12 +23,13 @@ footer
 						i.icon.icon-github(aria-hidden="true") 
 						span.screen-reader GitHub
 
-script(src='/wp-content/themes/portfolio/js/lazyload.js' type='text/javascript')
 script(type='text/javascript').
 	console.log("( ^ o ^ )/");
-	var myLazyLoad = new LazyLoad();
 
-
+	<?php if(is_single()){ ?>
+	hljs.initHighlightingOnLoad();
+	console.log("wut");
+	<?php } ?>
 
 
 <?php wp_footer(); ?>

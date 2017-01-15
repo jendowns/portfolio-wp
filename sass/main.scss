@@ -184,7 +184,6 @@ header {
 	}
 
 	ul {
-		list-style: none;
 		padding: 0;
 		margin: 0;
 		text-align: left;
@@ -287,15 +286,21 @@ article {
 
 .project__window {
 	width: 50%;
-	max-width: 600px;
-	height: auto;
-	margin: 10% auto;
+	max-width: 450px;
+}
+.window__wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
+	overflow: hidden;
 	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
 	@include border-radius(6);
 	border: 1px solid darken($toolbar--gray, 5%);
+
+	img {
+		width: 100%;
+		height: auto;
+	}
 }
 .window__toolbar {
 	height: 36px;
@@ -326,16 +331,6 @@ article {
 		border: 1px solid darken($button--green, 5%);
 	}
 }
-.window__content {
-	background-color: #fff;
-	flex-grow: 1;
-	border-radius: 0 0 6px 6px;
-
-	img {
-		width: 100%;
-		height: auto;
-	}
-}
 
 
 
@@ -351,22 +346,26 @@ footer {
 	}
 
 	ul {
-		list-style: none;
+		width: 50%;
 		padding: 0;
 		margin: 0;
 		text-align: left;
 		display: inline-block;
 	}
 
-	ul:last-child li {
-		display: inline-block;
-		padding: ($--baseline / 2 + px) ($--baseline + px);
+	ul:last-child {
+		text-align: right;
 
-		&:first-child {
-			padding-left: 0;
-		}
-		&:last-child {
-			padding-right: 0;
+		li {
+			display: inline-block;
+			padding: ($--baseline / 2 + px) ($--baseline + px);
+
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
 		}
 	}
 
@@ -416,6 +415,16 @@ footer {
 		}
 	}
 
+	ol {
+		list-style-type: decimal;
+		padding: 0 ($--baseline * 2 + px);
+
+		li {
+			padding-left: $--baseline / 2 + px;
+			margin: ($--baseline + px) 0;
+		}
+	}
+
 	p, span {
 		@include calc-font-flow(16);
 	}
@@ -446,8 +455,13 @@ footer {
 
 	img:not(.pull-right) {
 		border: 1px solid $toolbar--gray;
+		@include border-radius(6);
 		width: 90%;
-		margin: 0 auto;
+		max-width: 600px;
+	}
+
+	code {
+		@include border-radius(6);
 	}
 }
 
@@ -527,25 +541,6 @@ footer {
 		width: calc(100% - 8px);
 	}
 
-	.wrapper--img {
-		width: 80%;
-	}
-
-	nav {
-		padding: ($--baseline / 2 + px) ($--baseline / 2 + px);
-
-		a {
-			@include calc-font-flow(14);
-		}
-
-		.button {
-			padding: ($--baseline / 2 + px) ($--baseline / 2 + px);
-		}
-
-		li {
-			padding: ($--baseline / 2 + px) ($--baseline / 2 + px) ($--baseline / 2 + px) 0px;
-		}
-	}
 	.flex-grid {
 		display: block;
 	}
