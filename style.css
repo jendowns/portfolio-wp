@@ -491,11 +491,11 @@ footer {
   .single ol li {
     padding-left: 8px;
     margin: 16px 0; }
-.single p, .single span {
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 25.6px;
-  line-height: 2.56rem; }
+.single p, .single span, .single li {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 28.8px;
+  line-height: 2.88rem; }
 .single h1 {
   font-size: 48px;
   font-size: 4.8rem;
@@ -521,7 +521,9 @@ footer {
   border: 1px solid #dedede;
   border-radius: 6px;
   width: 90%;
-  max-width: 600px; }
+  max-width: 600px;
+  display: block;
+  margin: 0 auto; }
 .single code {
   border-radius: 6px; }
 

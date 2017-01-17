@@ -418,8 +418,8 @@ footer {
 		}
 	}
 
-	p, span {
-		@include calc-font-flow(16);
+	p, span, li {
+		@include calc-font-flow(18);
 	}
 
 	h1 {
@@ -451,6 +451,8 @@ footer {
 		@include border-radius(6);
 		width: 90%;
 		max-width: 600px;
+		display: block;
+    	margin: 0 auto;
 	}
 
 	code {
