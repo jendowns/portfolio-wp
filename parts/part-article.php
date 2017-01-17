@@ -20,7 +20,7 @@
         echo "<a href='" . $subpost_link . "'>";
         echo "<h3>" . $subpost_title . "</h3>";
         echo "</a>";
-        echo "<p><small>" . $formatted_date . "</small></p>";
+        echo "<p><small>Posted on " . $formatted_date . "</small></p>";
         echo "<p>" . $subpost_preview . "</p>";
         echo "<p>";
         echo "<a href='" . $subpost_link . "'>";
